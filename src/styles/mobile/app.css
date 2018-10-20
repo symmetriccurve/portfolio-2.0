@@ -1,0 +1,23 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .App {
+      background-color: white;
+    }
+  
+    .name {
+      color: black;
+    }
+    
+    .link{
+      color: black;
+    }
+  
+    .lName{
+      -webkit-text-stroke-color: rgb(0, 0, 0);
+    }
+  
+    .links-cont{
+      flex-direction: column;
+    }
+    
+  } 
