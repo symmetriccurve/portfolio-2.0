@@ -1,0 +1,102 @@
+/* common styles */
+
+.App {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  
+  .row{
+    display: flex;
+    flex-direction: row
+  }
+  
+  .col{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .name {
+    font-size: 6vw;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  
+  .lName{
+    color: transparent !important;
+  }
+  
+  .link{
+    font-size: 2vw;
+    font-family: 'Josefin Sans', sans-serif;
+    //font-family: 'Titillium Web', sans-serif;
+  }
+  
+  .link-seperator {
+    color: white;
+    font-size: 2vw;
+    margin-top: -7px;
+    font-weight: 100;
+  }
+
+/* 
+    ==========================================================================================
+                                        Desktops with 992px and up
+    ==========================================================================================
+*/
+
+@media only screen and (min-width: 992px) {
+    .App {
+        background-color: #222
+      }
+      .name {
+        color: whitesmoke;
+      }
+      
+      .link{
+        color: whitesmoke;
+      }
+      
+      .links-cont{
+        animation-name: links;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+        display: flex;
+        flex-direction: row;
+      }
+    
+      .lName{
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: rgb(255, 255, 255);
+      }
+
+      .name-cont{
+        animation-name: name;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+      }
+    
+  }
+
+
+  @keyframes name {
+    from {transform :scale(1);}
+    to {transform: scale(1.3);}
+  }
+  
+  @keyframes links {
+    from {transform :scale(1);}
+    to {transform: scale(0.7);}
+  }
+  
