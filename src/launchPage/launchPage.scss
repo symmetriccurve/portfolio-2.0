@@ -4,18 +4,46 @@
     ==========================================================================================
 */
 
-$desktop: 800px;
+// Break Points
+$desktop: 1440px;
+$tablet: 900px;
+$mobile: 400px;
+
+$primary-color: #222222;
 
 @mixin desktop{
-  @media(max-width: #{$desktop}){
+
+  @media only screen 
+  and (min-width: #{$tablet}) 
+  and (max-width: #{$desktop}) {
     @content;
   }
+
+}
+
+@mixin tablet{
+
+  @media only screen 
+  and (min-width: #{$mobile}) 
+  and (max-width: #{$tablet}) {
+    @content;
+  }
+
+}
+
+@mixin mobile{
+
+  @media only screen
+  and (max-width: #{$mobile}) {
+    @content;
+  }
+
 }
 
 
 
 .launch-page {
-    background-color: #222222;
+    background-color: $primary-color;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,7 +52,15 @@ $desktop: 800px;
     flex-direction: column;
 
     @include desktop{
-      background-color: white;
+      background-color:$primary-color;
+    }
+
+    @include tablet{
+      background-color:$primary-color;
+    }
+
+    @include mobile{
+      background-color:white;
     }
     
 
@@ -40,6 +76,12 @@ $desktop: 800px;
     animation-fill-mode: forwards;
     display: flex;
     flex-direction: row;
+
+    @include mobile{
+      flex-direction: column;
+      align-items: center;
+    }
+
   }
 
   &__link{
@@ -47,12 +89,35 @@ $desktop: 800px;
     color: white;
     font-size: 2vw;
     font-family: 'Josefin Sans', sans-serif;
+    text-decoration: none;
+
+    @include tablet{
+      color: white;
+      font-size: 5vw;
+    }
+
+    @include mobile{
+      color: $primary-color;
+      font-size: 10vw;
+    }
 
     &--seperator{
       color: white;
       font-size: 2vw;
       margin-top: -7px;
       font-weight: 100;
+  
+      @include tablet{
+        color: white;
+        font-size: 5vw;
+      }
+
+      @include mobile{
+        color: $primary-color;
+        font-size: 10vw;
+        display: none;
+      }
+
     }
   }
   
@@ -64,12 +129,24 @@ $desktop: 800px;
     font-size: 6vw;
     font-family: 'Josefin Sans', sans-serif;
 
+    @include mobile{
+      color: black;
+      font-size: 12vw;
+    }
+    
     &--lname{
       font-size: 6vw;
       font-family: "Josefin Sans", sans-serif;
       color: transparent !important;
       -webkit-text-stroke-width: 1px;
       -webkit-text-stroke-color: rgb(255, 255, 255);
+
+      @include mobile{
+        font-size: 12vw;
+        -webkit-text-stroke-width: 1px;
+       -webkit-text-stroke-color: $primary-color;
+      }
+      
     }
   }
 }
