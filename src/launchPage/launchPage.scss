@@ -1,54 +1,79 @@
-/* common styles */
+/* 
+    ==========================================================================================
+                                        Common Styles
+    ==========================================================================================
+*/
 
-.App {
+$desktop: 800px;
+
+@mixin desktop{
+  @media(max-width: #{$desktop}){
+    @content;
+  }
+}
+
+
+
+.launch-page {
+    background-color: #222222;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100vh;
-  }
-  
-  a{
-    text-decoration: none;
-  }
-  
-  .row{
-    display: flex;
-    flex-direction: row
-  }
-  
-  .col{
-    display: flex;
     flex-direction: column;
+
+    @include desktop{
+      background-color: white;
+    }
+    
+
+  &__name{
+      animation-name: name;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
   }
   
-  .cen{
+   &__links{
+    animation-name: links;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
   }
 
-  .name {
-    font-size: 6vw;
-    font-family: 'Josefin Sans', sans-serif;
-  }
-  
-  .lName{
-    color: transparent !important;
-  }
-  
-  .link{
-    font-size: 2vw;
-    font-family: 'Josefin Sans', sans-serif;
-    //font-family: 'Titillium Web', sans-serif;
-  }
-  
-  .link-seperator {
+  &__link{
+
     color: white;
     font-size: 2vw;
-    margin-top: -7px;
-    font-weight: 100;
+    font-family: 'Josefin Sans', sans-serif;
+
+    &--seperator{
+      color: white;
+      font-size: 2vw;
+      margin-top: -7px;
+      font-weight: 100;
+    }
   }
+  
+}
+
+.name {
+  &__letter{
+    color: white;
+    font-size: 6vw;
+    font-family: 'Josefin Sans', sans-serif;
+
+    &--lname{
+      font-size: 6vw;
+      font-family: "Josefin Sans", sans-serif;
+      color: transparent !important;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: rgb(255, 255, 255);
+    }
+  }
+}
+
 
 /* 
     ==========================================================================================
@@ -56,38 +81,38 @@
     ==========================================================================================
 */
 
-@media only screen and (min-width: 992px) {
-    .App {
-        background-color: #222
-      }
-      .name {
-        color: whitesmoke;
-      }
+// @media only screen and (min-width: 992px) {
+//     .App {
+//         background-color: #222
+//       }
+//       .name {
+//         color: whitesmoke;
+//       }
       
-      .link{
-        color: whitesmoke;
-      }
+//       .link{
+//         color: whitesmoke;
+//       }
       
-      .links-cont{
-        animation-name: links;
-        animation-duration: 3s;
-        animation-fill-mode: forwards;
-        display: flex;
-        flex-direction: row;
-      }
+//       .links-cont{
+//         animation-name: links;
+//         animation-duration: 3s;
+//         animation-fill-mode: forwards;
+//         display: flex;
+//         flex-direction: row;
+//       }
     
-      .lName{
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: rgb(255, 255, 255);
-      }
+//       .lName{
+//         -webkit-text-stroke-width: 1px;
+//         -webkit-text-stroke-color: rgb(255, 255, 255);
+//       }
 
-      .name-cont{
-        animation-name: name;
-        animation-duration: 3s;
-        animation-fill-mode: forwards;
-      }
+//       .name-cont{
+//         // animation-name: name;
+//         // animation-duration: 3s;
+//         // animation-fill-mode: forwards;
+//       }
     
-  }
+//   }
 
 
   @keyframes name {
