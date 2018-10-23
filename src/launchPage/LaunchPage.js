@@ -1,5 +1,6 @@
 import React from 'react';
 import './launchPage.scss'
+import './mixins.scss'
 export default function() {
       return (
           <div className='launch-page'>

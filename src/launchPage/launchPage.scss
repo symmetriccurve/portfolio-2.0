@@ -1,46 +1,4 @@
-/* 
-    ==========================================================================================
-                                        Common Styles
-    ==========================================================================================
-*/
-
-// Break Points
-$desktop: 1440px;
-$tablet: 900px;
-$mobile: 400px;
-
-$primary-color: #222222;
-
-@mixin desktop{
-
-  @media only screen 
-  and (min-width: #{$tablet}) 
-  and (max-width: #{$desktop}) {
-    @content;
-  }
-
-}
-
-@mixin tablet{
-
-  @media only screen 
-  and (min-width: #{$mobile}) 
-  and (max-width: #{$tablet}) {
-    @content;
-  }
-
-}
-
-@mixin mobile{
-
-  @media only screen
-  and (max-width: #{$mobile}) {
-    @content;
-  }
-
-}
-
-
+@import './mixins.scss';
 
 .launch-page {
     background-color: $primary-color;
@@ -65,14 +23,16 @@ $primary-color: #222222;
     
 
   &__name{
+      animation: linear;
       animation-name: name;
-      animation-duration: 1s;
+      animation-duration: 0.3s;
       animation-fill-mode: forwards;
   }
   
    &__links{
+    animation: linear;
     animation-name: links;
-    animation-duration: 1s;
+    animation-duration: 0.3s;
     animation-fill-mode: forwards;
     display: flex;
     flex-direction: row;
@@ -93,7 +53,7 @@ $primary-color: #222222;
 
     @include tablet{
       color: white;
-      font-size: 5vw;
+      font-size: 4vw;
     }
 
     @include mobile{
@@ -151,49 +111,8 @@ $primary-color: #222222;
   }
 }
 
-
-/* 
-    ==========================================================================================
-                                        Desktops with 992px and up
-    ==========================================================================================
-*/
-
-// @media only screen and (min-width: 992px) {
-//     .App {
-//         background-color: #222
-//       }
-//       .name {
-//         color: whitesmoke;
-//       }
-      
-//       .link{
-//         color: whitesmoke;
-//       }
-      
-//       .links-cont{
-//         animation-name: links;
-//         animation-duration: 3s;
-//         animation-fill-mode: forwards;
-//         display: flex;
-//         flex-direction: row;
-//       }
-    
-//       .lName{
-//         -webkit-text-stroke-width: 1px;
-//         -webkit-text-stroke-color: rgb(255, 255, 255);
-//       }
-
-//       .name-cont{
-//         // animation-name: name;
-//         // animation-duration: 3s;
-//         // animation-fill-mode: forwards;
-//       }
-    
-//   }
-
-
   @keyframes name {
-    from {transform :scale(1);}
+    from {transform :scale(1.5);}
     to {transform: scale(1.3);}
   }
   
