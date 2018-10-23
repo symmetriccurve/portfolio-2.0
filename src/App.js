@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import LaunchPage from './launchPage/LaunchPage';
-class App extends Component {
-  render() {
+const App = () => {
     return (
-      <div className="App">
-        <LaunchPage />
-      </div>
+	<div className="App">
+		<LaunchPage />
+	</div>
     );
-  }
 }
 
 export default App;
