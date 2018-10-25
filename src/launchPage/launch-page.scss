@@ -34,6 +34,7 @@
     animation-fill-mode: forwards;
     display: flex;
     flex-direction: row;
+    align-items: center;
 
     @include mobile{
       flex-direction: column;
@@ -43,7 +44,6 @@
   }
 
   &__link{
-
     color: white;
     font-size: 2vw;
     font-family: $primary-font;
@@ -55,6 +55,7 @@
     }
 
     @include mobile{
+      margin: 10px 0;
       color: $primary-color;
       font-size: 10vw;
     }
@@ -62,9 +63,9 @@
     &--seperator{
       color: white;
       font-size: 2vw;
-      margin-top: -7px;
       font-weight: 100;
-  
+      margin: 0 5px;
+
       @include tablet{
         color: white;
         font-size: 5vw;

@@ -1,4 +1,8 @@
 import React from 'react';
+import {
+  Link
+} from 'react-router-dom'
+
 export default function () {
   return (
 	<div className='launch-page'>
@@ -16,15 +20,17 @@ export default function () {
 			{/* <span className="name lName">d</span> 
               <span className="name lName">e</span>   */}
 		</div>
-		<div className='cen links-cont launch-page__links'>
-			<a href="/portfolio" className="launch-page__link">Portfolio</a>
-			<span className='launch-page__link--seperator'>| </span> &nbsp;&nbsp;
+		<div className='launch-page__links'>
+			<Link to="/blog">
+				<span className="launch-page__link">Blog</span>
+			</Link>
+			<span className='launch-page__link--seperator'>| </span>
 			<a href="#" className="launch-page__link">Blog</a>
-			<span className='launch-page__link--seperator'>| </span> &nbsp;&nbsp;
+			<span className='launch-page__link--seperator'>| </span>
 			<a href="#" className="launch-page__link">Apps</a>
-			<span className='launch-page__link--seperator'>| </span> &nbsp;&nbsp;
+			<span className='launch-page__link--seperator'>| </span>
 			<a href="#" className="launch-page__link">LinkedIn</a>
-			<span className='launch-page__link--seperator'>| </span> &nbsp;&nbsp;
+			<span className='launch-page__link--seperator'>| </span>
 			<a href="#" className="launch-page__link">Code</a>
 		</div>
 	</div>

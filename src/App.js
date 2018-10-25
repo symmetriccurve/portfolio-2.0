@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import LaunchPage from './launchPage/LaunchPage';
-import Header from './header/Header';
+import Routes from './Routes';
 
 const App = () => {
     return (
 	<div className="App">
-		<Header />
-		<LaunchPage />
+		<Routes />
 	</div>
     );
 }
