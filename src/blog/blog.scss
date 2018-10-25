@@ -18,8 +18,12 @@
             font-family: $primary-font;
             text-align: center;
             font-size: 1em;
-            //box-shadow: 0 10px 6px -6px #777;
-            
+            box-shadow: -1px 2px 7px -2px rgba(125,123,125,1);
+            border: none;
+
+            &:hover {
+                box-shadow: -1px 2px 7px -2px rgb(87, 87, 87); 
+            }
             &:focus{
                 outline: none;
             }
@@ -56,38 +60,26 @@
         z-index: -1;
         background-color: white;
         box-shadow: -1px 2px 7px -2px rgba(125,123,125,1);
+        width: 96%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 50px 0 10px 0px;
+        margin: 2% 2%;
+        padding: 50px 0 10px 0px;
 
         &:hover {
             box-shadow: -1px 2px 7px -2px rgb(87, 87, 87);  
         }
         @include desktop{
-            width: 96%;
-            margin: 2% 2%;
-            padding: 50px 0 50px 0px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
           }
       
           @include tablet{
-            width: 96%;
-            margin: 2% 2%;
-            padding: 50px 0 50px 0px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
           }
       
           @include mobile{
-            width: 96%;
             margin: 0 2%;
-            padding: 50px 0 50px 0px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
           }
     }
 
@@ -128,5 +120,24 @@
             font-family: $primary-font;
         }
 
+    }
+
+    &__buttons{
+        margin-top:1%;
+        display: flex;
+        flex:1;
+        width: 100%;
+        justify-content: flex-end;
+        flex-direction: row;
+    }
+
+    &__button{
+        margin: 0 30px 0 5px;
+        font-family: $primary-font;
+        border: 1px solid $primary-color;
+        padding: 8px;
+        color: white;
+        font-weight: 100;
+        background-color: $primary-color;
     }
 }
