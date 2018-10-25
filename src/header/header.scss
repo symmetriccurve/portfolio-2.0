@@ -24,6 +24,11 @@
   justify-content: flex-end;
   cursor: pointer;
 
+  &--active{
+    color:lighten(grey,5%);
+    cursor: auto;
+  }
+
   &--seperator{
     font-weight: 100;
     margin: 0px 5px;

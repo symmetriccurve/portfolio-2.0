@@ -1,13 +1,13 @@
 import React from 'react'
 
 import {
-  Link
+  NavLink
 } from 'react-router-dom'
 
 export default () => {
   return(
 	  <div class="header">
-		<Link to='/'>
+		<NavLink to='/'>
 			<div class="header__logo">
 				<div class="logo__name">
             Vikram
@@ -17,9 +17,15 @@ export default () => {
             Bel
 				</div>
 			</div>
-		</Link>
+		</NavLink>
 		<div class="header__links">
-			<span class="links__link"> PortFolio</span>
+			<NavLink to='/blog' activeClassName="links__link--active links__link">
+				Blog
+			</NavLink>
+			<span class="links__link--seperator">|</span>
+			<NavLink  exact to='/contact' activeClassName="links__link--active links__link">
+				Contact
+			</NavLink>
 			<span class="links__link--seperator">|</span>
 			<a href="https://github.com/symmetriccurve/">
 				<span class="links__link">Code</span>

@@ -7,6 +7,8 @@ html,body{
 }
 
 a {
+   font-family: $primary-font;
+    color: white;
     text-decoration: none;
 }
 
@@ -14,3 +16,4 @@ a {
 @import '../../layout/layout.scss';
 @import '../../header/header.scss';
 @import '../../blog/blog.scss';
+@import '../../contact/contact.scss';
