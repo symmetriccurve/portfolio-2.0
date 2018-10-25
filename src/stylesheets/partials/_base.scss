@@ -1,1 +1,10 @@
-@import '../../launchPage/launch-page.scss'
+/* Interesting Read: 
+https://stackoverflow.com/questions/34550467/why-is-there-a-default-margin-on-the-body-element/34550634 */
+
+html,body{
+    margin: 0;
+    padding: 0;
+}
+
+@import '../../launchPage/launch-page.scss';
+@import '../../header/header.scss';
