@@ -28,7 +28,6 @@
 }
 
 .b-cards__b-card{
-    position: absolute;
     width: 100%;
 
     @include mobile{
@@ -44,37 +43,90 @@
         position: absolute;
         display: flex;
         flex: 1;
+        
         &-text{
             font-family: $primary-font;
             background-color: #F7F7F7;
             padding: 3px 11px 3px 17px;
             color: #707072;
+            box-shadow: -1px 2px 7px -2px rgba(125,123,125,1);
         }
     }
-
     &__body{
-        position: absolute;
         z-index: -1;
-        width: 98%;
-        background-color:#eaeaea;
-        margin: 0 1%;
+        background-color: white;
+        box-shadow: -1px 2px 7px -2px rgba(125,123,125,1);
 
+        &:hover {
+            box-shadow: -1px 2px 7px -2px rgb(87, 87, 87);  
+        }
         @include desktop{
-
+            width: 96%;
+            margin: 2% 2%;
+            padding: 50px 0 50px 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
           }
       
           @include tablet{
-
+            width: 96%;
+            margin: 2% 2%;
+            padding: 50px 0 50px 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
           }
       
           @include mobile{
             width: 96%;
             margin: 0 2%;
-            padding: 50px 0 50px 0;
+            padding: 50px 0 50px 0px;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
           }
+    }
+
+    &__title{
+        
+        &-text{
+            font-family: $primary-font;
+            font-weight: bold;
+        }
+
+        @include desktop{
+            padding: 0 1%;
+          }
+      
+        @include tablet{
+            padding: 0 1%;
+        }
+    
+        @include mobile{
+            padding: 0 3%;
+        }
+
+    }
+
+    &__description{
+        @include desktop{
+            padding: 0 1%;
+          }
+      
+        @include tablet{
+            padding: 0 1%;
+        }
+    
+        @include mobile{
+            padding: 1% 3%;
+        }
+        &-text{
+            font-family: $primary-font;
+        }
+
     }
 }
