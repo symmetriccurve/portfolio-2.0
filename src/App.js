@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import LaunchPage from './launchPage/LaunchPage';
-class App extends Component {
-  render() {
+import Routes from './Routes';
+
+const App = () => {
     return (
-      <div className="App">
-        <LaunchPage />
-      </div>
+	<div className="App">
+		<Routes />
+	</div>
     );
-  }
 }
 
 export default App;

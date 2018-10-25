@@ -1,5 +1,5 @@
 'use strict';
-
+{/*eslint-disable*/}
 // Do this as the first thing so that any code reading it knows the right env.
 process.env.BABEL_ENV = 'development';
 process.env.NODE_ENV = 'development';
@@ -35,7 +35,7 @@ const useYarn = fs.existsSync(paths.yarnLockFile);
 const isInteractive = process.stdout.isTTY;
 
 // Warn and crash if required files are missing
-if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
+if (!checkRequiredFiles([ paths.appHtml, paths.appIndexJs ])) {
   process.exit(1);
 }
 
@@ -46,15 +46,15 @@ const HOST = process.env.HOST || '0.0.0.0';
 if (process.env.HOST) {
   console.log(
     chalk.cyan(
-      `Attempting to bind to HOST environment variable: ${chalk.yellow(
+      `Attempting to bind to HOST environment variable: ${ chalk.yellow(
         chalk.bold(process.env.HOST)
-      )}`
+      ) }`
     )
   );
   console.log(
-    `If this was unintentional, check that you haven't mistakenly set it in your shell.`
+    'If this was unintentional, check that you haven\'t mistakenly set it in your shell.'
   );
-  console.log(`Learn more here: ${chalk.yellow('http://bit.ly/2mwWSwH')}`);
+  console.log(`Learn more here: ${ chalk.yellow('http://bit.ly/2mwWSwH') }`);
   console.log();
 }
 
@@ -92,7 +92,7 @@ choosePort(HOST, DEFAULT_PORT)
       openBrowser(urls.localUrlForBrowser);
     });
 
-    ['SIGINT', 'SIGTERM'].forEach(function(sig) {
+    [ 'SIGINT', 'SIGTERM' ].forEach(function(sig) {
       process.on(sig, function() {
         devServer.close();
         process.exit();

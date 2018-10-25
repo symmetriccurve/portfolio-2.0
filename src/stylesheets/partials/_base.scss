@@ -1,0 +1,19 @@
+/* Interesting Read: 
+https://stackoverflow.com/questions/34550467/why-is-there-a-default-margin-on-the-body-element/34550634 */
+
+html,body{
+    margin: 0;
+    padding: 0;
+}
+
+a {
+   font-family: $primary-font;
+    color: white;
+    text-decoration: none;
+}
+
+@import '../../launchPage/launch-page.scss';
+@import '../../layout/layout.scss';
+@import '../../header/header.scss';
+@import '../../blog/blog.scss';
+@import '../../contact/contact.scss';
