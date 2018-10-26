@@ -1,7 +1,6 @@
 {/*eslint-disable */}
 import React, { Component } from 'react'
 import Layout from '../layout/Layout'
-import BlogCard from './BlogCard'
 import ReCAPTCHA from 'react-google-recaptcha';
 
 export default class Blog extends Component {

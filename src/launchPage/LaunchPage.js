@@ -34,6 +34,10 @@ export default function () {
 			<a href="#" className="launch-page__link">LinkedIn</a>
 			<span className='launch-page__link--seperator'>| </span>
 			<a href="#" className="launch-page__link">Code</a>
+			<span className='launch-page__link--seperator'>| </span>
+			<Link to="/contact">
+				<span className="launch-page__link">Contact</span>
+			</Link>
 		</div>
 	</div>
   );
