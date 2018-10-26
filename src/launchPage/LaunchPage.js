@@ -25,7 +25,9 @@ export default function () {
 				<span className="launch-page__link">Blog</span>
 			</Link>
 			<span className='launch-page__link--seperator'>| </span>
-			<a href="#" className="launch-page__link">Blog</a>
+			<Link to="/projects">
+				<span className="launch-page__link">Projects</span>
+			</Link>
 			<span className='launch-page__link--seperator'>| </span>
 			<a href="#" className="launch-page__link">Apps</a>
 			<span className='launch-page__link--seperator'>| </span>

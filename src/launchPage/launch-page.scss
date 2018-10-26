@@ -46,7 +46,7 @@
   &__link{
     color: white;
     font-size: 2vw;
-    font-family: $primary-font;
+    font-family: $logo-font;
     text-decoration: none;
 
     @include tablet{
@@ -86,7 +86,7 @@
   &__letter{
     color: white;
     font-size: 6vw;
-    font-family: $primary-font;
+    font-family: $logo-font;
 
     @include mobile{
       color: black;
@@ -95,7 +95,7 @@
     
     &--lname{
       font-size: 6vw;
-      font-family: $primary-font;
+      font-family: $logo-font;
       color: transparent !important;
       -webkit-text-stroke-width: 1px;
       -webkit-text-stroke-color: rgb(255, 255, 255);

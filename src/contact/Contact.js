@@ -10,6 +10,7 @@ export default class Blog extends Component {
 			Email : belvikram@gmail.com 
 			Mobile : +1-636-224-5062
 			( This page is under design stage. .)
+			<div className="g-recaptcha" data-sitekey="6Ldu7XYUAAAAADj7U1LjSG8cJ5oHIe6dIWIQEhKK"></div>
 		</div>
 	</Layout>
     )
