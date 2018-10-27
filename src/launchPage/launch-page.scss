@@ -33,8 +33,6 @@
     animation-duration: 0.3s;
     animation-fill-mode: forwards;
     display: flex;
-    flex-direction: row;
-    align-items: center;
 
     @include mobile{
       flex-direction: column;
@@ -48,10 +46,11 @@
     font-size: 2vw;
     font-family: $logo-font;
     text-decoration: none;
+    margin: 0 10px;
 
     @include tablet{
       color: white;
-      font-size: 4vw;
+      font-size: 3vw;
     }
 
     @include mobile{
@@ -64,7 +63,7 @@
       color: white;
       font-size: 2vw;
       font-weight: 100;
-      margin: 0 5px;
+      margin: 0 10px;
 
       @include tablet{
         color: white;
