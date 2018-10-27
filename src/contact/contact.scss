@@ -63,6 +63,7 @@
    
     &__OR {
         margin: 20px;
+        text-align: center;
     }
 
 	&__greeter { 
@@ -139,11 +140,9 @@
     }
 
     &__send{
-        background-color: $primary-color;
         margin: 30px 0px;
         padding: 10px;
-        box-shadow: -1px 2px 7px -2px rgba(125,123,125,1);
-        cursor: pointer;
+        text-align: center;
 
         @include desktop{
             //font-size: 2vw;
@@ -158,9 +157,30 @@
         }
 
         &__text {
+            background-color: $primary-color;
             color: white;
             font-family: $primary-font;
             font-weight: bold;
+            padding: 10px;
+            cursor: pointer;
         }
+
+        &__text--inactive {
+            background-color: grey;
+            color: white;
+            font-family: $primary-font;
+            font-weight: bold;
+            padding: 10px;
+        }
+    }
+
+    &__captcha{
+        display: flex;
+        justify-content: center;
+        margin: 30px 0px;
+    }
+
+    &__success{
+        margin: 20px 0px;
     }
 }
