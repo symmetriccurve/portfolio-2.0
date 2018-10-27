@@ -29,11 +29,11 @@ export default function () {
 				<span className="launch-page__link">Projects</span>
 			</Link>
 			<span className='launch-page__link--seperator'>| </span>
-			<a href="#" className="launch-page__link">Apps</a>
+			<a href="https://itunes.apple.com/us/developer/vikram-belde" className="launch-page__link">Apps</a>
 			<span className='launch-page__link--seperator'>| </span>
-			<a href="#" className="launch-page__link">LinkedIn</a>
+			<a href="https://www.linkedin.com/in/vikrambelde/" className="launch-page__link">LinkedIn</a>
 			<span className='launch-page__link--seperator'>| </span>
-			<a href="#" className="launch-page__link">Code</a>
+			<a href="https://github.com/symmetriccurve" className="launch-page__link">Code</a>
 			<span className='launch-page__link--seperator'>| </span>
 			<Link to="/contact">
 				<span className="launch-page__link">Contact</span>
