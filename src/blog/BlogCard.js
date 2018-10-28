@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default () => {
+export default ({ post }) => {
   return (
 	<div className="b-cards__b-card">
 		<div className="b-card__date">
@@ -9,7 +9,7 @@ export default () => {
 		<div className="b-card__body">
 			<div className="b-card__title">
 				<span className="b-card__title-text">
-                Integrate React Into any web app using NPM
+					{post.title}
 				</span> 
 			</div>
 			<div className="b-card__description">
