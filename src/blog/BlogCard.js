@@ -14,18 +14,18 @@ export default ({ post }) => {
 			</div>
 			<div className="b-card__description">
 				<span className="b-card__description-text">
-                Tutorial walks you through step by step to integrate react in any webapp Tutorial walks you through step by step to integrate react in any webapp
+					{post.content.subtitle}
 				</span>
 			</div>
 			<div className="b-card__buttons">
-				<a href="https://medium.com/@beldevikram/this-is-a-test-medium-post-291f4202e141">
+				{/* <a href="https://medium.com/@beldevikram/this-is-a-test-medium-post-291f4202e141">
 					<div className="b-card__button">
-                        Read
+              Read
 					</div>
-				</a>
-				<a href="https://medium.com/@beldevikram/this-is-a-test-medium-post-291f4202e141">
+				</a> */}
+				<a href={ `https://medium.com/@beldevikram/${ post.uniqueSlug }` }>
 					<div className="b-card__button">
-                     Share
+              Read
 					</div>
 				</a>
 			</div>
