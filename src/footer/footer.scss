@@ -1,13 +1,15 @@
-.header {
+.footer {
     background-color: $primary-color;
-    padding: 15px 0px;
+    padding: 10px 0 10px 0;
     display: flex;
 
     &__left{ 
       align-items: center;
       justify-content: center;
       display: flex;
-
+      color: white;
+      margin: 10px;
+      opacity: 0.5;
       @include mobile{
         flex: 1;
       }
@@ -27,7 +29,7 @@
     }
 
     &__logo {
-      margin-left: 20px;
+      margin-left: 10px;
       display: flex;
       flex-direction: row;
 

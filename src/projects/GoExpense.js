@@ -26,9 +26,9 @@ export default () => {
 			</div>
 			<div className="p-card__buttons">
 				<a href="https://medium.com/@beldevikram/this-is-a-test-medium-post-291f4202e141">
-					<div className="p-card__button">
+					{/* <div className="p-card__button">
               More
-					</div>
+					</div> */}
 				</a>
 			</div>
 		</div>
