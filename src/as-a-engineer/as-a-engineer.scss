@@ -1,0 +1,186 @@
+.contact { 
+    display: flex;
+    padding: 0px 0px 125px 0px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: $primary-font;
+    background-color: white;
+    margin: 10px;
+    box-shadow: -1px 2px 7px -2px rgba(125,123,125,1);
+
+	&__header--getInTouch { 
+        font-weight: bold;
+        margin: 30px 0px 10px 0px;
+
+        @include desktop{
+            font-size: 2vw;
+        }
+    
+        @include tablet{
+            font-size: 4vw;
+        }
+    
+        @include mobile{
+            font-size: 6vw;
+        }
+	}
+
+	&__header { 
+        
+        font-weight: 100;
+        color: gray;
+        margin: 10px 0px 0 0;
+
+        @include desktop{
+            font-size: 1.5vw;
+        }
+    
+        @include tablet{
+            font-size: 3vw;
+        }
+    
+        @include mobile{
+            font-size: 4vw;
+        }
+	}
+
+	&__info { 
+
+        @include desktop{
+            font-size: 2vw;
+        }
+    
+        @include tablet{
+            font-size: 3vw;
+        }
+    
+        @include mobile{
+            font-size: 4vw;
+        }
+
+    }
+   
+    &__OR {
+        margin: 20px;
+        text-align: center;
+    }
+
+	&__greeter { 
+        display: flex;
+        align-items: center;
+
+        @include desktop{
+            font-size: 2vw;
+        }
+    
+        @include tablet{
+            font-size: 2vw;
+        }
+
+        @include mobile{
+            flex-direction: column;
+        }
+
+	}
+}
+
+.greeter {
+    &__sentence--my-name { 
+
+        @include desktop{
+            font-size: 2vw;
+        }
+
+        @include tablet{
+            font-size: 2.5vw;
+        }
+
+        @include mobile{
+            font-size: 6.5vw;
+        }
+    }
+
+    &__sentence { 
+
+        @include desktop{
+            padding: 0px 10px;
+        }
+
+        @include tablet{
+            font-size: 2.3vw;
+            padding: 0px 10px;
+        }
+    }
+
+    &__input--name { 
+        text-align: center;
+        font-family: $primary-font;
+        margin: 5px 0px 0px 0px;
+        height: 35px;
+        box-shadow: -1px 2px 7px -2px rgba(125,123,125,1);
+        border: 1px solid rgba(0, 0, 0, 0.18);
+
+        &:focus{
+            outline: none;
+        }
+    }
+
+    &__input--email { 
+        text-align: center;
+        font-family: $primary-font;
+        height: 35px;
+        margin: 5px 0px 0px 0px;
+        box-shadow: -1px 2px 7px -2px rgba(125,123,125,1);
+        border: 1px solid rgba(0, 0, 0, 0.18);
+
+        &:focus{
+            outline: none;
+        }
+    }
+
+    &__send{
+        margin: 30px 0px;
+        padding: 10px;
+        text-align: center;
+
+        @include desktop{
+            //font-size: 2vw;
+        }
+
+        @include tablet{
+            //font-size: 2.5vw;
+        }
+
+        @include mobile{
+            //font-size: 6.5vw;
+        }
+
+        &__text {
+            background-color: $primary-color;
+            color: white;
+            font-family: $primary-font;
+            font-weight: bold;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        &__text--inactive {
+            background-color: grey;
+            color: white;
+            font-family: $primary-font;
+            font-weight: bold;
+            padding: 10px;
+        }
+    }
+
+    &__captcha{
+        display: flex;
+        justify-content: center;
+        margin: 30px 0px;
+    }
+
+    &__success{
+        margin: 20px 0px;
+    }
+}

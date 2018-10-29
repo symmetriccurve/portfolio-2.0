@@ -12,24 +12,16 @@ export default () => {
 		</div>
 		<div className='footer__right'>		
 			<div className="footer__links">
-				<NavLink to='/blog' activeClassName="links__link--active links__link">
-						Blog
+				<NavLink  exact to='/as-a-engineer' activeClassName="links__link--active links__link">
+						As a Engineer
 				</NavLink>
 				<span className="links__link--seperator">|</span>
-				<NavLink  exact to='/projects' activeClassName="links__link--active links__link">
-						Projects
+				<NavLink  exact to='/as-a-teacher' activeClassName="links__link--active links__link">
+						As a Teacher
 				</NavLink>
 				<span className="links__link--seperator">|</span>
-				<a href="https://github.com/symmetriccurve/">
-					<span className="links__link">Code</span>
-				</a>
-				<span className="links__link--seperator">|</span>
-				<NavLink  exact to='/contact' activeClassName="links__link--active links__link">
-						Contact
-				</NavLink>
-				<span className="links__link--seperator">|</span>
-				<NavLink  exact to='/about-me' activeClassName="links__link--active links__link">
-						Picturize Me
+				<NavLink  exact to='/today-i-learned' activeClassName="links__link--active links__link">
+						Today I Learned
 				</NavLink>
 				{/* <span className="links__link--seperator">|</span>
 					<a href="https://www.linkedin.com/in/vikrambelde/">
