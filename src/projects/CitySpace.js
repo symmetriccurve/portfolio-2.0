@@ -33,12 +33,13 @@ export default () => {
 					</ul>
 				</span>
 			</div>
-			<div className="p-card__buttons">
-				<a href="https://medium.com/@beldevikram/this-is-a-test-medium-post-291f4202e141">
-					{/* <div className="p-card__button">
-              More
-					</div> */}
-				</a>
+			<div className='p-card__tech-stack'>
+				<div className='tech-stack__title'>
+					Technical Stack
+				</div>
+				<div className='tech-stack__body'>
+					React-native, Flux, Flexbox, iOS, Android, Xcode, Android studio, npm, Google-Maps, Air-Maps, Firebase,  JWT
+				</div>	
 			</div>
 		</div>
 	</div>

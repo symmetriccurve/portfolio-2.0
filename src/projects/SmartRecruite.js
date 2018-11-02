@@ -24,12 +24,13 @@ export default () => {
 						Sensity® Systems uses energy-efficient LED lighting as the foundation for its IoT platform for Smart Cities. The company enables light owners to capitalize on the LED conversion process by embedding networking technology within both retrofit and new LED luminaires. With the Sensity open, privacy-by-design, multiservice NetSense™ platform, lighting owners are able to reduce energy costs and implement a variety of Smart City applications and services, including public safety, environmental and weather monitoring, parking management and location analytics.
 				</span>
 			</div>
-			<div className="p-card__buttons">
-				<a href="https://medium.com/@beldevikram/this-is-a-test-medium-post-291f4202e141">
-					{/* <div className="p-card__button">
-              More
-					</div> */}
-				</a>
+			<div className='p-card__tech-stack'>
+				<div className='tech-stack__title'>
+					Technical Stack
+				</div>
+				<div className='tech-stack__body'>
+					Jquery, PHP,  HTML and CSS
+				</div>	
 			</div>
 		</div>
 	</div>

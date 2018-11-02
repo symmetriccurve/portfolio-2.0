@@ -43,12 +43,13 @@ export default () => {
 					</ul>
 				</span>
 			</div>
-			<div className="p-card__buttons">
-				<a href="https://medium.com/@beldevikram/this-is-a-test-medium-post-291f4202e141">
-					{/* <div className="p-card__button">
-              More
-					</div> */}
-				</a>
+			<div className='p-card__tech-stack'>
+				<div className='tech-stack__title'>
+					Technical Stack
+				</div>
+				<div className='tech-stack__body'>
+					Reactjs, ES6, babel, Redux, react-router(V4), react-select, react-data-grid, React D3, react-autocomplete, videojs, Google SSO, Webpack, Webpack-dev-server SASS, Bootstrap, npm, nodejs, Express, Docker, NgInx, elasticsearch, Javascript, HTML and  CSS.
+				</div>	
 			</div>
 		</div>
 	</div>
