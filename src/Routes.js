@@ -6,7 +6,7 @@ import Projects from './projects/Projects'
 import AboutMe from './aboutMe/AboutMe'
 import AsAEngineer from './as-a-engineer/AsAEngineer'
 import AsATeacher from './as-a-teacher/AsATeacher'
-import TodayILearned from './today-i-learned/TodayILearned'
+import TodayILearned from './today-i-learned/TodayILearnedAdmin'
 
 import {
     HashRouter,

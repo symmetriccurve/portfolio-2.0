@@ -4,7 +4,7 @@ export default ({ post }) => {
   return (
 	<div className="b-cards__b-card">
 		<div className="b-card__date">
-			<span className="b-card__date-text"> 29th June 2018 </span>
+			<span className="b-card__date-text"> {post.pubDate} </span>
 		</div>
 		<div className="b-card__body">
 			<div className="b-card__title">
@@ -14,7 +14,7 @@ export default ({ post }) => {
 			</div>
 			<div className="b-card__description">
 				<span className="b-card__description-text">
-					{post.content.subtitle}
+					<div dangerouslySetInnerHTML={ { __html: post[ "content:encoded" ] } } />
 				</span>
 			</div>
 			<div className="b-card__buttons">
@@ -23,7 +23,7 @@ export default ({ post }) => {
               Read
 					</div>
 				</a> */}
-				<a href={ `https://medium.com/@beldevikram/${ post.uniqueSlug }` }>
+				<a href={  post.link[ 0 ] }>
 					<div className="b-card__button">
               Read
 					</div>
