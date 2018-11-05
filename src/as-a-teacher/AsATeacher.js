@@ -1,4 +1,4 @@
-//{/*eslint-disable */}
+{/*eslint-disable */}
 import React, { Component } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import Layout from '../layout/Layout';
@@ -109,25 +109,10 @@ export default class Contact extends Component {
 	render(){
 		return(
 			<Layout>
-				<div className="contact">
-					<div className="contact__header--getInTouch">
-					GET IN TOUCH
-					</div>
-					<div className="contact__header">
-					Shoot an email to
-					</div>
-					<div className="contact__info">
-					belvikram@gmail.com
-					</div>
-					<div className="contact__header">
-					Or ring me on
-					</div>
-					<div className="contact__info">
-					+1-636-224-5062
-					</div>
-					<div className="contact-greeter">
-						{this.renderGreeterBlock()}
-					</div>
+				<div className="teacher">
+					I strongly believe, "Teaching is one the best ways to learn", it helps me to gain a different
+					perspective if unless I would never imagine. 
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/U5VyZPTUzM4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
 			</Layout>
 		)
