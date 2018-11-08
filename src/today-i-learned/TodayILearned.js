@@ -3,12 +3,14 @@ import React, { Component } from 'react';
 import TILCard from './TILCard';
 import Layout from '../layout/Layout';
 
+const learnings = [ 'this','that','happen','to','be','same' ]
+
 export default () => {
   return (
 	<Layout>
 		<div className='til'>
 			{
-				[ 1,2,3,5,6 ].map(eachLearning=> {
+				learnings.map(eachLearning=> {
 				return <TILCard key={ eachLearning } learning={ eachLearning }/>
 				})
 			}
