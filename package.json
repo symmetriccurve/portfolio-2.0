@@ -32,6 +32,7 @@
     "react": "^16.5.2",
     "react-dev-utils": "^5.0.2",
     "react-dom": "^16.5.2",
+    "react-ga": "^2.5.3",
     "react-google-recaptcha": "^1.0.4",
     "react-router-dom": "^4.3.1",
     "reactstrap": "^6.5.0",
