@@ -7,6 +7,7 @@ import AboutMe from './aboutMe/AboutMe'
 import AsAEngineer from './as-a-engineer/AsAEngineer'
 import AsATeacher from './as-a-teacher/AsATeacher'
 import TodayILearned from './today-i-learned/TodayILearned'
+import TodayILearnedAdmin from './today-i-learned/TodayILearnedAdmin'
 
 import {
     HashRouter,
@@ -26,6 +27,7 @@ export default ()=>{
 				<Route exact path="/as-a-engineer" component={ AsAEngineer }/>
 				<Route exact path="/as-a-teacher" component={ AsATeacher }/>
 				<Route exact path="/today-i-learned" component={ TodayILearned }/>
+				<Route exact path="/today-i-learned-admin" component={ TodayILearnedAdmin }/>
 			</div>
 		</HashRouter>
 	</div>
