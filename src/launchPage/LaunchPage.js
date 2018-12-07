@@ -52,6 +52,9 @@ export default class componentName extends Component {
 						<span className='launch-page__link'>Contact</span>
 					</Link>
 				</div>
+				<div className='launch-page__bottom__links'>
+					<a href='https://github.com/symmetriccurve/portfolio-2.0' target='_blank' className='bottom__links__link'>This portfolio is open source</a>
+				</div>
 			</div>
 		)
 	}
