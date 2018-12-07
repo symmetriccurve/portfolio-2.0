@@ -1,3 +1,3 @@
 before_script:
   - npm install
-script: npm run build
+script: CI=false npm run build
