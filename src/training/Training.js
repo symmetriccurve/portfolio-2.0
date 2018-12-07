@@ -9,7 +9,9 @@ export default class Contact extends Component {
 	render(){
 		return(
 			<Layout>
-				
+				<div className='train'>
+					<a href="https://goo.gl/fHftTL">Training Details</a>
+				</div>	
 			</Layout>
 		)
 	}
