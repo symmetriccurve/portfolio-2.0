@@ -49,7 +49,6 @@
       align-items: center;
       top:25%;
     }
-
   }
 
   &__link{
@@ -88,6 +87,18 @@
       }
 
     }
+  }
+
+  &__bottom__links{
+    position: absolute;
+    bottom: 3%;
+
+    a {
+        color: white;
+        text-decoration: underline;
+        opacity: 0.5;
+    }
+
   }
   
 }
