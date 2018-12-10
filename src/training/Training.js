@@ -37,8 +37,6 @@ export default class Contact extends Component {
 						<br />
 						<br />
 						The training includes interview questions, everyday quizzes , assignments and workshops, mock interviews, and keen focus on every student. Every session is recorded and provided lifetime access with provided email address.
-						Every session is recorded and shared with student immediately after the class for future reference.
-
 						<br />
 						<br />
 						<span className='bold underline'>Additionally: </span>
