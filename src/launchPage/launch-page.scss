@@ -4,8 +4,10 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+    width: 100%;
     flex-direction: column;
     flex:1;
+    position: absolute;
 
     @include desktop{
       background-color:$primary-color;
@@ -25,20 +27,28 @@
       animation-name: name;
       animation-duration: 0.3s;
       animation-fill-mode: forwards;
+      position: absolute;
+
+      @include mobile{
+        top:20%;
+      }
+
   }
   
    &__links{
+    position: absolute;
     animation: linear;
     animation-name: links;
     animation-duration: 0.3s;
     animation-fill-mode: forwards;
     display: flex;
+    top:55%;
 
     @include mobile{
       flex-direction: column;
       align-items: center;
+      top:25%;
     }
-
   }
 
   &__link{
@@ -77,6 +87,18 @@
       }
 
     }
+  }
+
+  &__bottom__links{
+    position: absolute;
+    bottom: 3%;
+
+    a {
+        color: white;
+        text-decoration: underline;
+        opacity: 0.5;
+    }
+
   }
   
 }

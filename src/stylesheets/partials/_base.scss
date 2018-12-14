@@ -13,6 +13,10 @@ a {
     text-decoration: none;
 }
 
+.bold{
+    font-weight: bold;
+}
+
 
 @import '../../launchPage/launch-page.scss';
 @import '../../layout/layout.scss';
@@ -24,6 +28,8 @@ a {
 
 @import '../../as-a-teacher/as-a-teacher.scss';
 @import '../../as-a-engineer/as-a-engineer.scss';
+@import '../../today-i-learned/today-i-learned.scss';
+@import '../../training/training.scss';
 
 @import '../../footer/footer.scss';
 

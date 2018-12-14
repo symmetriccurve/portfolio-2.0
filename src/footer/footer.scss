@@ -8,9 +8,18 @@
       justify-content: center;
       display: flex;
       color: white;
-      margin: 10px 0px;
+      margin: 10px 0px 10px 10px;
       opacity: 0.5;
+
       @include mobile{
+        margin: 10px 0px;
+        font-size: 0.5em;
+        flex: 1;
+      }
+
+      @include tablet{
+        margin: 10px 0px;
+        font-size: 0.4em;
         flex: 1;
       }
 
