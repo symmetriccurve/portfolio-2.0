@@ -1,20 +1,18 @@
 import React from 'react'
+var HtmlToReactParser = require('html-to-react').Parser;
+var htmlToReactParser = new HtmlToReactParser();
 
-export default ({ post }) => {
+export default ({ blogPost }) => {
+	debugger
   return (
 	<div className="b-cards__b-card">
 		<div className="b-card__date">
-			<span className="b-card__date-text"> 29th June 2018 </span>
+			<span className="b-card__date-text"> 27th June 2018</span>
 		</div>
 		<div className="b-card__body">
-			<div className="b-card__title">
-				<span className="b-card__title-text">
-					{post.title}
-				</span> 
-			</div>
 			<div className="b-card__description">
 				<span className="b-card__description-text">
-					{post.content.subtitle}
+					{ htmlToReactParser.parse(blogPost.htmlMarkUp) }
 				</span>
 			</div>
 			<div className="b-card__buttons">
@@ -23,11 +21,11 @@ export default ({ post }) => {
               Read
 					</div>
 				</a> */}
-				<a href={ `https://medium.com/@beldevikram/${ post.uniqueSlug }` }>
+				{/* <a href=''>
 					<div className="b-card__button">
               Read
 					</div>
-				</a>
+				</a> */}
 			</div>
 		</div>
 	</div>
