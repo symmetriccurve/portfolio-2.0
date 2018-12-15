@@ -29,24 +29,22 @@
             }
         }
     }
-    &__download {
-        display: flex;
-        color: #222222;
-        justify-content: flex-end;
-        margin: 20px 4% 0% 4%;
-        
-        @include mobile{
-            justify-content: center;
-        }
 
-        a{
-            color: #ffffff;
-            padding: 10px;
-            background-color: $primary-color;
-            font-weight: bold;
-        }
+    &__header{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin: 20px 4% 1% 4%;
+    }
+    
+}
+
+.header{
+    &__resume {
+        margin-left: 1%;
     }
 }
+
 
 .p-cards__p-card{
     width: 100%;
@@ -58,7 +56,6 @@
 }
 
 .p-card{
-    
     &__date{
         padding: 10px 0 10px 0;
         position: absolute;

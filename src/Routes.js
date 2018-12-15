@@ -8,6 +8,7 @@ import AsAEngineer from './as-a-engineer/AsAEngineer'
 import AsATeacher from './as-a-teacher/AsATeacher'
 import TodayILearned from './today-i-learned/TodayILearned'
 import Training from './training/Training'
+import PetProjects from './pet-projects/PetProjects'
 
 import {
     HashRouter,
@@ -28,6 +29,7 @@ export default ()=>{
 				<Route exact path="/as-a-teacher" component={ Training }/>
 				<Route exact path="/today-i-learned" component={ TodayILearned }/>
 				<Route exact path="/Training" component={ Training }/>
+				<Route exact path="/pet-projects" component={ PetProjects }/>
 			</div>
 		</HashRouter>
 	</div>
