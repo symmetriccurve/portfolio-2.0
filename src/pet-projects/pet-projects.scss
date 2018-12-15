@@ -1,0 +1,25 @@
+.train { 
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   //height: 100vh;
+   background-color: white;
+   margin: 10px;
+   box-shadow: -1px 2px 7px -2px rgba(125,123,125,1);
+
+   a {
+       color: $primary-color;
+       text-decoration: underline;
+   }
+   &__details{
+       padding: 0 50px 50px 50px;
+       text-align: justify;
+   }
+}
+
+.details{
+    &__i-believe{
+        text-align: center;
+        font-size: 1.5em;
+    }
+}
