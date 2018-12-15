@@ -7,7 +7,7 @@ import {
 export default class componentName extends Component {
 
 	state = {
-		lastUpdatedOn: ''
+		lastUpdatedOn: 'December 14 2018'
 	}
 
 	componentDidMount() {
@@ -19,11 +19,12 @@ export default class componentName extends Component {
 					toString does to "Tue Dec 11 2018 13:57:07 GMT-0500 (Central Daylight Time)"
 					slice it to make "Dec 11 2018"
 				*/
+				 /* 
 				let lastUpdatedOn = new Date(res.commit.committer.date)
 				lastUpdatedOn = lastUpdatedOn.toString().slice(4,-42)
 				this.setState({
 					lastUpdatedOn
-				})
+				}) */
 			})
 	}
 
