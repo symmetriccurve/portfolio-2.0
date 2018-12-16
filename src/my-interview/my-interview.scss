@@ -1,3 +1,5 @@
+@import './my-interview-card/my-interview-card.scss';
+
 .train { 
    display: flex;
    align-items: center;
@@ -21,9 +23,5 @@
     &__i-believe{
         text-align: center;
         font-size: 1.5em;
-    }
-
-    &__video{
-        //TODO: add responsive styles
     }
 }

@@ -29,14 +29,15 @@ export default class Blog extends Component {
 						<input className="blog__search-bar__input" placeholder="Search"/>
 					</div> */}
 			<div className='projects__header'>
+				<NavLink to='/my-interview'>
+					<Button label={ "Interview" } onClick={ ()=>{} } />
+				</NavLink> 
 				<NavLink to='/pet-projects'>
 					<Button label={ "Things I do beside this" } onClick={ ()=>{} } />
 				</NavLink> 
-				<div className='header__resume'>
-					<a href='https://docs.google.com/document/d/1rQUigIKVexwfT-YBXisBr0cjIh50uHNSaKS2MZ1LC00/export?format=pdf'>
-						<Button label={ "Download Resume" } onClick={ ()=>{} } />
-					</a>	
-				</div>
+				<a href='https://docs.google.com/document/d/1rQUigIKVexwfT-YBXisBr0cjIh50uHNSaKS2MZ1LC00/export?format=pdf'>
+					<Button label={ "Download Resume" } onClick={ ()=>{} } />
+				</a>	
 			</div>
 			<div className="projects__p-cards">
 				<CMS />

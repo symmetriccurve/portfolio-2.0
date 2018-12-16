@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import Layout from '../layout/Layout';
 
-export default class Traning extends Component {
+export default class Training extends Component {
 
 	render() {
 		return (
@@ -64,8 +64,7 @@ export default class Traning extends Component {
 						<span className='bold underline'>Previous Sessions</span>
 						<br />
 						<br />
-
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL0E9KS54ZJocKl4-Hx6k2qsqPAkQs8RA0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<iframe  className='details__video' src="https://www.youtube.com/embed/videoseries?list=PL0E9KS54ZJocKl4-Hx6k2qsqPAkQs8RA0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</p>
 				</div>
 			</Layout>
