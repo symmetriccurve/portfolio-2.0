@@ -1,0 +1,21 @@
+.editor{
+
+    &__edit{
+        margin: 1.5% 2%;
+        background-color: white;
+        border: 1px solid #c5c2c2;
+    }
+
+    &__footer{
+        margin-right: 30px;
+        display: flex;
+       justify-content: flex-end;
+        
+    }
+}
+
+.footer {
+    &__button{
+      margin: 0px 20px 10px 0px;  
+    }
+}
