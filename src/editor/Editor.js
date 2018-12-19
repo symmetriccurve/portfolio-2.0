@@ -58,7 +58,6 @@ export default class App extends React.Component {
               editorClassName="demo-editor"
               onEditorStateChange={ this.onEditorStateChange }
             />
-			{/* <button onClick={ ()=>{this.postArticle()} }>post</button> */}
 		</div>
 	</Layout>
     );

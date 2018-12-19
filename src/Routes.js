@@ -1,6 +1,7 @@
 import React from 'react';
 import LaunchPage from './launchPage/LaunchPage';
 import Blog from './blog/Blog'
+import Editor from './editor/Editor'
 import Contact from './contact/Contact'
 import Projects from './projects/Projects'
 import AboutMe from './aboutMe/AboutMe'
@@ -28,6 +29,7 @@ export default ()=>{
 				<Route exact path="/as-a-teacher" component={ Training }/>
 				<Route exact path="/today-i-learned" component={ TodayILearned }/>
 				<Route exact path="/Training" component={ Training }/>
+				<Route exact path="/editor" component={ Editor }/>
 			</div>
 		</HashRouter>
 	</div>
