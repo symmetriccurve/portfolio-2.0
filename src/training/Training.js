@@ -1,13 +1,14 @@
-{/*eslint-disable */}
 import React, { Component } from 'react';
 import Layout from '../layout/Layout';
-
+import Viewer from '../markdownViewer/MarkdownViewer'
+import urls from '../data-layer/urls.json'
+import trainingMarkDown from './training.md'
 export default class Traning extends Component {
-
 	render() {
 		return (
 			<Layout>
-				<div className='train'>
+				<Viewer urlToPullMarkDownFrom={ urls.training } fallbackMarkDown={ trainingMarkDown }/>	
+				{/* <div className='train'>
 					<p className='train__details'>
 						<p className='details__i-believe'> I strongly believe, <span className='bold'>"Teaching is one the best ways to learn"</span>, it helps me to gain a different perspective if unless I would never imagine. </p>
 						With increase in demand for more robust web application, companies are moving towards single page applications and adding server side rendering strategies. With ReactJs, this comes out of the box.
@@ -67,7 +68,7 @@ export default class Traning extends Component {
 
 						<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL0E9KS54ZJocKl4-Hx6k2qsqPAkQs8RA0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</p>
-				</div>
+				</div> */}
 			</Layout>
 		)
 	}

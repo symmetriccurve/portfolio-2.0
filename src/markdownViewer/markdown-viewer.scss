@@ -1,0 +1,14 @@
+.markdown {
+    background-color: white;
+    padding: 4%;
+
+    a{
+        text-decoration: underline;
+        color: $primary-color;
+    }
+
+    ::selection {
+        background: $primary-color; /* WebKit/Blink Browsers */
+        color: white;
+      }
+}

@@ -27,7 +27,7 @@ export default ()=>{
 				<Route exact path="/contact" component={ Contact }/>
 				<Route exact path="/about-me" component={ AboutMe }/>
 				<Route exact path="/as-a-engineer" component={ AsAEngineer }/>
-				<Route exact path="/as-a-teacher" component={ Training }/>
+				<Route exact path="/as-a-teacher" component={ AsATeacher }/>
 				<Route exact path="/today-i-learned" component={ TodayILearned }/>
 				<Route exact path="/Training" component={ Training }/>
 				<Route exact path="/pet-projects" component={ PetProjects }/>
