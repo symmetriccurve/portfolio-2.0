@@ -1,8 +1,8 @@
 
 ### 3 Weeks UI Basic Course
 
-- #### What is DOM and Why Dom Manipulation is a neccesary to update UI ?
-- #### Why do we have many frameworks to manipulate DOM ?
+- ##### What is DOM and Why Dom Manipulation is a neccesary to update UI ?
+- ##### Why do we have many frameworks to manipulate DOM ?
 - #### Why Learn React ?
 - #### How popular is React ?
 - #### How React handles the DOM Manipulation ?
