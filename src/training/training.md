@@ -1,6 +1,33 @@
 
 ### 3 Weeks UI Basic Course
 
+#### What is DOM and Why Dom Manipulation is a neccesary to update UI ?
+#### Why do we have many frameworks to manipulate DOM ?
+#### Why Learn React ?
+#### How popular is React ?
+#### How React handles the DOM Manipulation ?
+#### What is Virtual DOM ?
+#### What is JSX ?
+#### What is Babel ?
+#### What is ES6 ?
+#### What is Webpack ?
+#### What is Boilerplate ?
+
+
+#### Installation/Configuration of Reactjs to get started
+#### What is Package.json ?
+#### What is React Package ?
+#### What is React-Dom ?
+#### What is public folder ?
+#### What is Sourcr folder ?
+#### What are node_modules ?
+####
+####
+####
+####
+
+
+
 #### Introduction to React and Redux and why do we need them in first place.
 #### How different is React from rest of the frameworks, 
 #### What is a Virtual DOM and how to get started with React.
