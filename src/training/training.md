@@ -12,7 +12,9 @@ A basic understading of HTML, CSS and Javascript are required
 - Mock Interviews
 - Interview questions
 - Resume reviews
-- Access to paid content to encourge students keep going after the course. 
+- Access to [paid content](https://www.udemy.com/courses/search/?src=ukw&q=react) to encourge students keep going after the course. 
+
+[Sample training session](https://www.youtube.com/watch?v=Zb_CXlMHa2M)
 
 ### What we discuss during the sessions. 
 
