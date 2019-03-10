@@ -4,7 +4,7 @@ import CodeBlock from './renderers/codeblocks'
 export default class MarkDownViewer extends Component {
 
 	state = {
-		markDown: this.props.fallbackMarkDown
+		markDown: []
 	};
 
 	componentDidMount() {
@@ -13,6 +13,7 @@ export default class MarkDownViewer extends Component {
 				return res.text();
 			})
 			.then(resText => {
+				resText = resText.split('---')
 				this.setState({
 					markDown: resText
 				});
@@ -24,11 +25,19 @@ export default class MarkDownViewer extends Component {
 	render() {
 		return (
 			<div className='markdown'>
-				<ReactMarkdown
-					source={ this.state.markDown }
-					escapeHtml={ false }
-					renderers={ { code: CodeBlock } }
-				/>
+				{
+					this.state.markDown.map(each => {
+						return (
+							<div className='markdown__card'>
+								<ReactMarkdown
+									source={ each }
+									escapeHtml={ false }
+									renderers={ { code: CodeBlock } }
+								/>
+							</div>	
+						)
+					})
+				}
 			</div>
 		)
 	}

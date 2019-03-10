@@ -10,6 +10,7 @@ import AsATeacher from './as-a-teacher/AsATeacher'
 import TodayILearned from './today-i-learned/TodayILearned'
 import Training from './training/Training'
 import PetProjects from './pet-projects/PetProjects'
+import IQuestions from './i-questions/IQuestions'
 
 import {
     HashRouter,
@@ -30,6 +31,7 @@ export default ()=>{
 				<Route exact path="/as-a-teacher" component={ AsATeacher }/>
 				<Route exact path="/today-i-learned" component={ TodayILearned }/>
 				<Route exact path="/Training" component={ Training }/>
+				<Route exact path="/interviewQuestions" component={ IQuestions }/>
 				<Route exact path="/pet-projects" component={ PetProjects }/>
 				<Route exact path="/editor" component={ Editor }/>
 			</div>
