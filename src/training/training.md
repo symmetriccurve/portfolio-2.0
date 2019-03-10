@@ -78,7 +78,10 @@ A basic understading of HTML, CSS and Javascript are required
 - #### What is memoriation in react
 - #### All new component lifecycles
     - getDerivedState from props
-- #### unit testing react components
+- #### Introduction to State-Management libaries
+    - Flux
+    - Redux
+- #### Unit testing react components
 - #### Deploying the application
 
 ### Please reach out to the [trainer](aksharnow@gmail.com) if you have any questions. 
