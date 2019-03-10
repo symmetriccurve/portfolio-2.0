@@ -13,18 +13,26 @@
 - #### What is Webpack ?
 - #### What is Boilerplate ?
 
-
-#### Installation/Configuration of Reactjs to get started
-#### What is Package.json ?
-#### What is React Package ?
-#### What is React-Dom ?
-#### What is public folder ?
-#### What is Sourcr folder ?
-#### What are node_modules ?
-####
-####
-####
-####
+- #### Installation/Configuration of Reactjs to get started - Node and npm installation
+- #### Choosing the right IDE.
+- #### create-react-app package
+- #### What is Package.json ?
+- #### What is React Package ?
+- #### What is React-Dom ?
+- #### What is public folder ?
+- #### What is Source folder ?
+- #### What are node_modules ?
+- #### What is npm ?
+- #### What is yarn ?
+- #### How React starts rendering with help of React-DOM
+- #### Creating React Components
+- #### What are lifecycles in React ?
+    - Constructor or getInitialState
+    - Render
+    - ComponentDidMount
+- #### What is State ? Why do we need one ?
+- #### Creating multiple components
+- #### 
 
 
 
