@@ -1,5 +1,5 @@
 
-### 3 Weeks UI Basic Course
+### ReactJs Training Course for beginners 
 
 ### The duration of the course spans between 2 to 3 weeks on how we progress. The course includes daily quizes and assignments which are actively discussed during the sessions. Students will have access to the session recordings on the registered email address.
 
