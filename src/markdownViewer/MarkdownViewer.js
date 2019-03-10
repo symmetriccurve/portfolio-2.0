@@ -4,7 +4,9 @@ import CodeBlock from './renderers/codeblocks'
 export default class MarkDownViewer extends Component {
 
 	state = {
-		markDown: []
+		markDown: [],
+		searchStr: '',
+		filtered: []
 	};
 
 	componentDidMount() {
@@ -15,20 +17,51 @@ export default class MarkDownViewer extends Component {
 			.then(resText => {
 				resText = resText.split('---')
 				this.setState({
-					markDown: resText
+					markDown: resText,
+					filtered: resText
 				});
 			})
 			.catch(err => {
 				console.log('error', err);
 			});
 	}
+
+	handleSearch(e){
+		const { markDown } = this.state
+		const { value } = e.target
+		const filtered = []
+		this.setState({
+			searchStr: value
+		})
+
+		markDown.forEach(each=>{
+			if(each.toLowerCase().indexOf(value.toLowerCase()) > -1 ){
+				each = each.replace(value,`<mark>${ value }</mark>`)
+				filtered.push(each)
+			}
+		})
+
+		this.setState({
+			filtered
+		})
+		
+	}
+
 	render() {
+		const { showSearchBar } = this.props
+		const { searchStr, filtered } = this.state
 		return (
 			<div className='markdown'>
+				{ 
+					showSearchBar && 
+					<div className="markdown__search-bar">
+						<input className="markdown__search-bar__input" placeholder='Search' value={ searchStr } onChange={ e=>this.handleSearch(e) } />
+					</div>
+				}
 				{
-					this.state.markDown.map(each => {
+					filtered.map(each => {
 						return (
-							<div className='markdown__card'>
+							<div className='markdown__card' key={ each }>
 								<ReactMarkdown
 									source={ each }
 									escapeHtml={ false }

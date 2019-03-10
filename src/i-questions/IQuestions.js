@@ -8,7 +8,7 @@ export default class Training extends Component {
 	render() {
 		return (
 			<Layout>
-				<Viewer urlToPullMarkDownFrom={ urls.iQuestions } fallbackMarkDown={ '' }/>	
+				<Viewer showSearchBar urlToPullMarkDownFrom={ urls.iQuestions } fallbackMarkDown={ '' }/>	
 			</Layout>
 		)
 	}

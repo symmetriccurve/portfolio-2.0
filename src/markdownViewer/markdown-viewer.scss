@@ -21,5 +21,39 @@
         background-color: white;
         padding: 2%;
         box-shadow: -1px 2px 7px -2px rgba(125,123,125,1);
+    
+        @include tablet{
+          padding: 3%;
+        }
+    
+        @include mobile{
+          padding: 5%;
+        }
       }
+
+      &__search-bar {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+        margin: 2% 0%;
+
+        input{
+            height: 35px;
+            width: 95%;
+            text-decoration: none;
+            font-family: $primary-font;
+            text-align: center;
+            font-size: 1em;
+            box-shadow: -1px 2px 7px -2px rgba(125,123,125,1);
+            border: none;
+
+            &:hover {
+                box-shadow: -1px 2px 7px -2px rgb(87, 87, 87); 
+            }
+            &:focus{
+                outline: none;
+            }
+        }
+    }
 }
