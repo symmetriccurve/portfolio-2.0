@@ -13,6 +13,7 @@ A basic understading of HTML, CSS and Javascript are required
 - [Interview questions discussion](http://www.belvikram.com/portfolio-2.0/#/interviewQuestions)
 - Resume reviews
 - Access to [paid content](https://www.udemy.com/courses/search/?src=ukw&q=react) to encourge students keep going after the course. 
+- [Access to resume formatting tool](https://www.resumonk.com/)
 
 [Sample training session](https://www.youtube.com/watch?v=Zb_CXlMHa2M)
 
