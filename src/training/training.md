@@ -10,7 +10,7 @@ A basic understading of HTML, CSS and Javascript are required
 ### What all included
 
 - Mock Interviews
-- Interview questions
+- [Interview questions discussion](http://www.belvikram.com/portfolio-2.0/#/interviewQuestions)
 - Resume reviews
 - Access to [paid content](https://www.udemy.com/courses/search/?src=ukw&q=react) to encourge students keep going after the course. 
 
