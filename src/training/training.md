@@ -84,4 +84,4 @@ A basic understading of HTML, CSS and Javascript are required
 - #### Unit testing react components
 - #### Deploying the application
 
-### Please reach out to the [trainer](aksharnow@gmail.com) if you have any questions. 
+### Please reach out to the [trainer](http://www.belvikram.com/portfolio-2.0/#/contact) if you have any questions. 
