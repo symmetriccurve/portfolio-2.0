@@ -3,11 +3,11 @@
 
 ### The duration of the course spans between 2 to 3 weeks on how we progress. The course includes daily quizes and assignments which are actively discussed during the sessions. Students will have access to the session recordings on the registered email address.
 
-#### prerequisites 
+### Prerequisites 
 A basic understading of HTML, CSS and Javascript are required 
 
 
-#### what all included
+### What all included
 
 - Mock Interviews
 - Interview questions
@@ -78,24 +78,7 @@ A basic understading of HTML, CSS and Javascript are required
 - #### What is memoriation in react
 - #### All new component lifecycles
     - getDerivedState from props
+- #### unit testing react components
+- #### Deploying the application
 
-
-
-
-(This module Requires a lot of understanding of moving parts of React and Asynchronous API calls), this session might span up to 2 to 3 hours.
-
-Mock Interviews
-Resume Preparation and Review to add skillset
-Resource Sharing 
-Build Reusable components and Push to NPM Library and Github
-Frequently asked Interview Questions 
-
-
-
-Other things we will be discussing are:
-Git : https://git-scm.com/download/gui/windows
-Setting up projects
-Agile Methodology
-JIRA and other ticketing tools
-Code Documentation and release notes
-Where to look for help.
+### Please reach out to the [trainer](aksharnow@gmail.com) if you have any questions. 
