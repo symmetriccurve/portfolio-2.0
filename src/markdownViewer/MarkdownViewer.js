@@ -10,7 +10,6 @@ export default class MarkDownViewer extends Component {
 	componentDidMount() {
 		fetch(this.props.urlToPullMarkDownFrom)
 			.then(res => {
-				debugger
 				return res.text();
 			})
 			.then(resText => {
