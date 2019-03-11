@@ -19,12 +19,12 @@ export default class componentName extends Component {
 					toString does to "Tue Dec 11 2018 13:57:07 GMT-0500 (Central Daylight Time)"
 					slice it to make "Dec 11 2018"
 				*/
-				 /* 
+				  
 				let lastUpdatedOn = new Date(res.commit.committer.date)
 				lastUpdatedOn = lastUpdatedOn.toString().slice(4,-42)
 				this.setState({
 					lastUpdatedOn
-				}) */
+				})
 			})
 	}
 
@@ -33,7 +33,7 @@ export default class componentName extends Component {
 		return (
 			<div className="footer">
 				<div className="footer__left">
-					Copyright © 2018 Vikram Belde. All rights reserved
+					Copyright © 2019 Vikram Belde. All rights reserved
 					<span className="footer__left--lastUpdatedOnText">
 						 (Last Updated on {lastUpdatedOn})
 					</span>	
