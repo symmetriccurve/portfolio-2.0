@@ -1,6 +1,6 @@
 .markdown {
     //background-color: white;
-    padding: 4%;
+    padding: 1% 2%;
 
     a{
         text-decoration: underline;
@@ -29,6 +29,13 @@
         @include mobile{
           padding: 0.5% 5%;
         }
+      }
+
+      &__loader{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 90vh;
       }
 
       &__search-bar {
