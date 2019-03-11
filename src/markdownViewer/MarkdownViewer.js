@@ -36,7 +36,7 @@ export default class MarkDownViewer extends Component {
 
 		markDown.forEach(each=>{
 			if(each.toLowerCase().indexOf(value.toLowerCase()) > -1 ){
-				each = each.replace(value,`<mark>${ value }</mark>`)
+				//each = each.replace(value,`<mark>${ value }</mark>`)
 				filtered.push(each)
 			}
 		})
