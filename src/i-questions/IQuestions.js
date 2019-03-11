@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from '../markdownViewer/renderers/codeblocks';
+import Layout from '../layout/Layout';
 import Loader from 'react-loaders';
 import 'loaders.css/src/animations/ball-rotate.scss';
 import urls from '../data-layer/urls'
@@ -64,30 +65,32 @@ export default class iQuestions extends Component {
 	render() {
 		const { searchStr, filtered, react, html, css, javascript } = this.state
 		return (
-			<div className='markdown'>
-				<div className="markdown__search-bar">
-					<input className="markdown__search-bar__input" placeholder='Search' value={ searchStr } onChange={ e=>this.handleSearch(e) } />
+			<Layout>
+				<div className='markdown'>
+					<div className="markdown__search-bar">
+						<input className="markdown__search-bar__input" placeholder='Search' value={ searchStr } onChange={ e=>this.handleSearch(e) } />
+					</div>
+					{
+						!react.length && 
+						<div>
+							<Loader className='markdown__loader' type="ball-rotate" />
+						</div>	
+					}
+					{
+						filtered.map(each => {
+							return (
+								<div className='markdown__card' key={ each }>
+									<ReactMarkdown
+										source={ each }
+										escapeHtml={ false }
+										renderers={ { code: CodeBlock } }
+									/>
+								</div>	
+							)
+						})
+					}
 				</div>
-				{
-					!react.length && 
-					<div>
-						<Loader className='markdown__loader' type="ball-rotate" />
-					</div>	
-				}
-				{
-					filtered.map(each => {
-						return (
-							<div className='markdown__card' key={ each }>
-								<ReactMarkdown
-									source={ each }
-									escapeHtml={ false }
-									renderers={ { code: CodeBlock } }
-								/>
-							</div>	
-						)
-					})
-				}
-			</div>
+			</Layout>	
 		)
 	}
 }
