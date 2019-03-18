@@ -42,7 +42,12 @@
     animation-duration: 0.3s;
     animation-fill-mode: forwards;
     display: flex;
-    top:55%;
+    top: 57%;
+    opacity: 0.5;
+
+    @include tablet{
+      top: 55%;
+    }
 
     @include mobile{
       flex-direction: column;

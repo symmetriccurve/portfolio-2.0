@@ -6,9 +6,9 @@ import Footer from '../footer/Footer'
 
 export default ({ children }) => {
   return (
-	<div className='layout'>
+	<div>
 		<Header />
-		<div >
+		<div className='layout'>
 			{children}
 		</div>
 		<Footer />	
