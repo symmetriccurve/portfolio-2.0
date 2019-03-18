@@ -2,7 +2,7 @@
   "name": "portfolio-2.0",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://www.belvikram.com",
+  "homepage": "www.belvikram.com",
   "dependencies": {
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",
