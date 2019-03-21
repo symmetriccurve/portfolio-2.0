@@ -34,12 +34,12 @@ export default () => {
 					<span className="links__link">Code</span>
 				</a>
 				<span className="links__link--seperator">|</span>
-				<NavLink  exact to='/contact' activeClassName="links__link--active links__link">
-						Contact
-				</NavLink>
-				<span className="links__link--seperator">|</span>
 				<NavLink  exact to='/my-interview' activeClassName="links__link--active links__link">
 						My Interview
+				</NavLink>
+				<span className="links__link--seperator">|</span>
+				<NavLink  exact to='/contact' activeClassName="links__link--active links__link">
+						Contact
 				</NavLink>
 				{/* <span className="links__link--seperator">|</span>
 					<a href="https://www.linkedin.com/in/vikrambelde/">
