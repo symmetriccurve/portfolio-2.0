@@ -1,13 +1,20 @@
 ## Getting-Started-with-React-Unit-Testing
 
-```javascript
 A simple React Component:
-import React, { Component } from 'react'; //import './Card.css';
-class SampleComponent extends Component { render() { return (
-{this.props.title}
-)
-} }
-export default SampleComponent;
+
+```javascript
+
+import React, { Component } from 'react'
+class SampleComponent extends Component { 
+  render(){ 
+    return (
+      <div>{this.props.title}</div>
+    )
+  }
+}
+
+export default SampleComponent
+
 ```
 
 Above simple Components just renders a Label when Passed as title Props. Sample usage : 
