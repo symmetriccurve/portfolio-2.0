@@ -38,11 +38,15 @@ All the React Component API's like setState(),this.props, and all life cycle met
 
 So We Inject Our React Components in to Enzyme and Make a copy of it to test the behaviour
 Well There are three types of copies we can make :
-Shallow Copy : This Copy does not Effect the Child Components but does make a count of them For example : parent =
+Shallow Copy : This Copy does not Effect the Child Components but does make a count of them
 In the Above Example if we make a copy of Parent Using Enzyme Shallow Render
 
 
+```javascript
+
 const Wrapper = shallow(<Parent />) // Usually Named as Wrapper as this is just wrapper of actual DOM Technically it can be named anything
+
+```
 
 (This is How to make a Copy !. isn't Simple ! )
 
@@ -53,7 +57,7 @@ As it does not even render it does even know what a child component would look l
 The disadvantage with Shallow Render is that the React component Cycle Cycles cannot be used, in use cases where we need to test the behaviour of the component using life cycle methods
 For Example:
 Is the State set when componentDidMount Happen
-Does component Render if Component receives new Props(ComponentWillReceiveProps)
+Does component Render if Component receives new Props(`ComponentWillReceiveProps`)
 
 To take advantage of all life cycle methods we can use
 const wrapper = mount(<Foo />)
