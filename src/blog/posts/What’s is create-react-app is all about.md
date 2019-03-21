@@ -1,3 +1,5 @@
+## What’s is create-react-app is all about ?
+
 Usually every web App we develop is bundled in to a single file end of the day and is placed on a server, and when ever a request comes to this server. the bundle is served. The bundle is nothing but combination of all the development files put into single file,
 
 Most of you know that index.html is the default file that is served when a request is made, we add a script to link to this bundle file inside our HTML file, so HTML file acts like base and what ever we build is placed in bundle. both together brings up your website or webapp.
