@@ -18,14 +18,15 @@ export default class iQuestions extends Component {
 	};
 
 	componentDidMount() {
-		const searchStr = this.props.location.search.split('=')[ 1 ].replace(/%20/g,' ')
+		const urlParams = this.props.location.search.split('=')[ 1 ]
+		const searchStr = urlParams ? urlParams.replace(/%20/g,' ') : ''
 		this.setState({ searchStr })
 		let calls = []
+		let markDown = []
 		urls.iQuestions.forEach(eachURL=>{
 			const call = fetch(eachURL).then(res=>res.text())
 			calls.push(call)
 		})
-		let markDown = []
 		Promise.all(calls)
 		.then(topics=>{
 			topics.forEach(topic=>{
