@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import ReactMarkdown from 'react-markdown';
-import CodeBlock from '../markdownViewer/renderers/codeblocks';
-import Layout from '../layout/Layout';
-import Loader from 'react-loaders';
-import 'loaders.css/src/animations/ball-rotate.scss';
+import React, { Component } from 'react'
+import ReactMarkdown from 'react-markdown'
+import CodeBlock from '../markdownViewer/renderers/codeblocks'
+import Layout from '../layout/Layout'
+import Loader from 'react-loaders'
+import 'loaders.css/src/animations/ball-rotate.scss'
 import urls from '../data-layer/urls'
 export default class MyInterview extends Component {
 
@@ -14,15 +14,15 @@ export default class MyInterview extends Component {
 	componentDidMount() {
 		fetch(urls.myInterview)
 			.then(res => {
-				return res.text();
+				return res.text()
 			})
 			.then(resText => {
 				this.setState({
-					markdown: '',
+					markdown: resText,
 				});
 			})
 			.catch(err => {
-				console.log('error', err);
+				console.log('error', err)
 			})
 	}
 
@@ -30,11 +30,11 @@ export default class MyInterview extends Component {
 		const { markdown } = this.state
 		return (
 			<Layout>
-				<div className='markdown'>
+				<div className='my-interview'>
 					{
 						!markdown &&
 						<div>
-							<Loader className='markdown__loader' type="ball-rotate" />
+							<Loader className='markdown__loader' type='ball-rotate' />
 						</div>
 					}
 					<ReactMarkdown

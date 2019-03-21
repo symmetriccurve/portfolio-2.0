@@ -9,5 +9,6 @@
         "https://raw.githubusercontent.com/symmetriccurve/Interview-questions/master/Scenario%20Based%20Questions.md"
     ],
     "todayILearned":"https://raw.githubusercontent.com/symmetriccurve/portfolio-2.0/master/src/today-i-learned/today-i-learned.md",
-    "blog":"https://api.github.com/repos/symmetriccurve/portfolio-2.0/contents/src/blog/posts"
+    "blog":"https://api.github.com/repos/symmetriccurve/portfolio-2.0/contents/src/blog/posts",
+    "myInterview": "https://raw.githubusercontent.com/symmetriccurve/portfolio-2.0/master/src/myInterview/my-interview.md"
 }
