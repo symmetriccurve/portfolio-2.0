@@ -8,6 +8,7 @@ import urls from '../data-layer/urls'
 export default class iQuestions extends Component {
 
 	state = {
+		markDown: [],
 		react: [],
 		html: [],
 		css :[],
@@ -17,35 +18,38 @@ export default class iQuestions extends Component {
 	};
 
 	componentDidMount() {
-		urls.iQuestions.forEach((eachURL,index)=>{
-			fetch(eachURL)
-			.then(res => {
-				return res.text();
-			})
-			.then(resText => {
-				resText = resText.split('---')
-				this.setState({
-					react: this.state.react.concat(resText),
-					filtered: this.state.react.concat(resText)
-				});
-			})
-			.catch(err => {
-				console.log('error', err);
-			});
+		const searchStr = this.props.location.search.split('=')[ 1 ].replace(/%20/g,' ')
+		this.setState({ searchStr })
+		let calls = []
+		urls.iQuestions.forEach(eachURL=>{
+			const call = fetch(eachURL).then(res=>res.text())
+			calls.push(call)
 		})
-		
+		let markDown = []
+		Promise.all(calls)
+		.then(topics=>{
+			topics.forEach(topic=>{
+				markDown = markDown.concat(topic.split('---'))
+			})
+			this.setState({ 
+				markDown, 
+				filtered:markDown,
+			},()=>this.handleSearch(searchStr))
+		})
+		.catch(err=>{
+			console.log('Error fetching interview questions',err)
+		})
 	}
 
-	handleSearch(e){
-		const { react, html, css, javascript } = this.state
-		const { value } = e.target
+	handleSearch(searchStr){
+		const { markDown, html, css, javascript } = this.state
 		const filtered = []
 		this.setState({
-			searchStr: value
+			searchStr
 		})
-
-		react.forEach(each=>{
-			if(each.toLowerCase().indexOf(value.toLowerCase()) > -1 ){
+		this.props.history.replace(`/interviewQuestions?search=${ searchStr }`)
+		markDown.forEach(each=>{
+			if(each.toLowerCase().indexOf(searchStr.toLowerCase()) > -1 ){
 				//each = each.replace(value,`<mark>${ value }</mark>`)
 				/* 
 					TO-DO: FIX SEARCH
@@ -55,26 +59,30 @@ export default class iQuestions extends Component {
 				filtered.push(each)
 			}
 		})
-
 		this.setState({
 			filtered
 		})
-		
 	}
 
 	render() {
-		const { searchStr, filtered, react, html, css, javascript } = this.state
+		const { markDown, searchStr, filtered, react, html, css, javascript } = this.state
 		return (
 			<Layout>
 				<div className='markdown'>
 					<div className="markdown__search-bar">
-						<input className="markdown__search-bar__input" placeholder='Search' value={ searchStr } onChange={ e=>this.handleSearch(e) } />
+						<input className="markdown__search-bar__input" placeholder='Search' value={ searchStr } onChange={ e=>this.handleSearch(e.target.value) } />
 					</div>
 					{
-						!react.length && 
+						!markDown.length && 
 						<div>
 							<Loader className='markdown__loader' type="ball-rotate" />
 						</div>	
+					}
+					{
+						markDown.length && !filtered.length &&
+						<div>
+							<span className='center'>No Results</span>
+						</div>
 					}
 					{
 						filtered.map(each => {
