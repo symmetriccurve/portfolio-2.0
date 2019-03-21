@@ -4,7 +4,7 @@ import Blog from './blog/Blog'
 import Editor from './editor/Editor'
 import Contact from './contact/Contact'
 import Projects from './projects/Projects'
-import AboutMe from './aboutMe/AboutMe'
+import MyInterview from './myInterview/MyInterview'
 import AsAEngineer from './as-a-engineer/AsAEngineer'
 import AsATeacher from './as-a-teacher/AsATeacher'
 import TodayILearned from './today-i-learned/TodayILearned'
@@ -26,7 +26,7 @@ export default ()=>{
 				<Route exact path="/blog" component={ Blog }/>
 				<Route exact path="/projects" component={ Projects }/>
 				<Route exact path="/contact" component={ Contact }/>
-				<Route exact path="/about-me" component={ AboutMe }/>
+				<Route exact path="/my-interview" component={ MyInterview }/>
 				<Route exact path="/as-a-engineer" component={ AsAEngineer }/>
 				<Route exact path="/as-a-teacher" component={ AsATeacher }/>
 				<Route exact path="/today-i-learned" component={ TodayILearned }/>

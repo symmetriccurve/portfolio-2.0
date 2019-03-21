@@ -38,8 +38,8 @@ export default () => {
 						Contact
 				</NavLink>
 				<span className="links__link--seperator">|</span>
-				<NavLink  exact to='/about-me' activeClassName="links__link--active links__link">
-						Picturize Me
+				<NavLink  exact to='/my-interview' activeClassName="links__link--active links__link">
+						My Interview
 				</NavLink>
 				{/* <span className="links__link--seperator">|</span>
 					<a href="https://www.linkedin.com/in/vikrambelde/">

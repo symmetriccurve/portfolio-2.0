@@ -1,4 +1,4 @@
-.about-me { 
+.my-interview { 
     display: flex;
     padding: 0px 0px 30px 0px;
     align-items: center;
@@ -10,5 +10,13 @@
 
     &__text{
         padding: 40px;
+    }
+
+    &__question{
+
+    }
+
+    &__answer{
+        
     }
 }

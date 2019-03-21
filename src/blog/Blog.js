@@ -4,7 +4,7 @@ import Loader from 'react-loaders';
 import ReactMarkdown from 'react-markdown'
 import CodeBlock from '../markdownViewer/renderers/codeblocks';
 import Layout from '../layout/Layout'
-
+import urls from '../data-layer/urls'
 export default class Blog extends Component {
 
 	state = {
@@ -12,7 +12,7 @@ export default class Blog extends Component {
 	};
 
 	componentDidMount() {
-		fetch('https://api.github.com/repos/symmetriccurve/portfolio-2.0/contents/src/blog/posts')
+		fetch(urls.blog)
 			.then(res => res.json())
 			.then(resText => {
 				resText.forEach(each => {
