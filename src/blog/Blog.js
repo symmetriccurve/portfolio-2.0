@@ -1,26 +1,64 @@
 import React, { Component } from 'react'
 import ShowContentsHOC from '../hoc/ShowContent'
+import Loader from 'react-loaders';
+import ReactMarkdown from 'react-markdown'
+import CodeBlock from '../markdownViewer/renderers/codeblocks';
 import Layout from '../layout/Layout'
-import BlogCard from './BlogCard'
 
-const Blog =  ({ data }) => {
-  const blogPosts = []
-  for(const key in data){
-    blogPosts.push(data[ key ])
-  }
-  return (
-	<Layout>
-		<div>
-			{
-        blogPosts.map(eachBlogPost=>{
-          return <BlogCard blogPost={ eachBlogPost } / >
-        })
-      }
-		</div>
-	</Layout>
-  )
+export default class Blog extends Component {
+
+	state = {
+		postsAsText: []
+	};
+
+	componentDidMount() {
+		fetch('https://api.github.com/repos/symmetriccurve/portfolio-2.0/contents/src/blog/posts')
+			.then(res => res.json())
+			.then(resText => {
+				resText.forEach(each => {
+					fetch(each.download_url)
+						.then(post => post.text())
+						.then(postAsText => {
+							this.setState({
+								postsAsText: [ ...this.state.postsAsText, postAsText ]
+							})
+						})
+						.catch(err => {
+							console.log('error', err);
+						})
+				})
+			})
+			.catch(err => {
+				console.log('error', err);
+			})
+	}
+
+	render() {
+		const { postsAsText } = this.state
+		return (
+			<Layout>
+				<div className='markdown'>
+					{
+						!postsAsText.length &&
+						<div>
+							<Loader className='markdown__loader' type="ball-rotate" />
+						</div>
+					}
+					{
+						postsAsText.map(each => {
+							return (
+								<div className='markdown__card' key={ each }>
+									<ReactMarkdown
+										source={ each }
+										escapeHtml={ false }
+										renderers={ { code: CodeBlock } }
+									/>
+								</div>
+							)
+						})
+					}
+				</div>
+			</Layout>
+		)
+	}
 }
-
-const BlogWithData = ShowContentsHOC(Blog,'https://portfolio-18e3f.firebaseio.com/questions.json')
-
-export default BlogWithData
