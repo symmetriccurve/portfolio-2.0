@@ -1,13 +1,8 @@
 ### Tell me about your self?
-My full name is Vikram Belde.
-I am mobile and web developer, I started my career as a mobile app developer and learnt web development. 
+I am a Developer, Designer, Engineer and I enjoy Teaching and Mentoring. I am a full time web developer with part time mobile app developer. I love mentoring and helping beginners to get started on web development. Along side development, I love desinging and prototyping. I own a [3d printer](https://www.youtube.com/watch?v=odDZMYr1di8) and I absolutely love it. 
 
 ---
 
-### How many years of experience you have on UI ?
-I have in total of 5 years of experience on mobile and web development.
+### What do you enjoy the most web development or mobile app development ?
+I enjoy coding for web and designing for mobile.
 
----
-
-### What do you enjoy more Mobile App Development vs Web Developement ?
-I enjoy developing mobile friendly web designs
