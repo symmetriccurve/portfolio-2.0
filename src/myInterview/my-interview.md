@@ -14,7 +14,7 @@ Flying Drones, prototyping, 3d printing and making react tutorials.
 ---
 
 ### What is that your most proud of in terms of coding ?
-I think I am proud of builing [mine-sweeper](https://github.com/symmetriccurve/minesweeper-with-react) using React.
+I think I am proud of coding [mine-sweeper](https://github.com/symmetriccurve/minesweeper-with-react) using React.
 
 ---
 
