@@ -8,7 +8,7 @@ I enjoy coding for web and designing for mobile.
 
 ---
 
-### What do you do in your ideal time ?
+### What do you kill time ?
 Flying Drones, prototyping, 3d printing and making react tutorials. 
 
 ---
@@ -21,3 +21,7 @@ I think I am proud of builing [mine-sweeper](https://github.com/symmetriccurve/m
 ### What do you like to build in day to day job ?
 I like building developer tools which can help developers to build more better things, so I like to build things that helps to build. 
 
+---
+
+### What is a fun fact about you ?
+I can match a 3X3 Rubix cube in less than 3 minutes
