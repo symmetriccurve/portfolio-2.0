@@ -10,11 +10,11 @@ import {
 //   console.log('callback - particles.js config loaded');
 // });
 
-export default class componentName extends Component {
+export default class LaunchPage extends Component {
 	componentDidMount() {
-		// particlesJS.load('particles-js', '/particlesjs-config.json', function() {
-		// 	//console.log('callback - particles.js config loaded');
-		// });
+		particlesJS.load('particles-js', '/particlesjs-config.json', function() {
+			//console.log('callback - particles.js config loaded');
+		});
 	}
 	render() {
 		return (

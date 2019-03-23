@@ -11,11 +11,11 @@ export default () => {
 			<NavLink to='/'>
 				<div className="header__logo">
 					<div className="logo__name">
-									Vikram
+						Vikram
 					</div>
 							&nbsp;
 					<div className="logo__name--last">
-									Bel
+						Bel
 					</div>
 				</div>
 			</NavLink>
