@@ -11,6 +11,7 @@ import TodayILearned from './today-i-learned/TodayILearned'
 import Training from './training/Training'
 import PetProjects from './pet-projects/PetProjects'
 import IQuestions from './i-questions/IQuestions'
+import Register from './register/Register'
 
 import {
     HashRouter,
@@ -34,6 +35,7 @@ export default ()=>{
 				<Route exact path="/interviewQuestions" component={ IQuestions }/>
 				<Route exact path="/pet-projects" component={ PetProjects }/>
 				<Route exact path="/editor" component={ Editor }/>
+				<Route exact path="/register" component={ Register }/>
 			</div>
 		</HashRouter>
 	</div>
