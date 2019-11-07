@@ -1,7 +1,8 @@
-{/*eslint-disable*/}
-import React,{ Component } from 'react';
-import {
-  Link
+{/*eslint-disable*/ }
+import React, { Component } from 'react';
+import
+{
+	Link
 } from 'react-router-dom'
 
 // import particleJS from 'particles.js'
@@ -10,13 +11,17 @@ import {
 //   console.log('callback - particles.js config loaded');
 // });
 
-export default class LaunchPage extends Component {
-	componentDidMount() {
-		particlesJS.load('particles-js', '/particlesjs-config.json', function() {
+export default class LaunchPage extends Component
+{
+	componentDidMount()
+	{
+		particlesJS.load('particles-js', '/particlesjs-config.json', function ()
+		{
 			//console.log('callback - particles.js config loaded');
 		});
 	}
-	render() {
+	render()
+	{
 		return (
 			<div className='launch-page' id='particles-js'>
 				<div className='launch-page__name'>
@@ -26,7 +31,7 @@ export default class LaunchPage extends Component {
 					<span className='name__letter'>r</span>
 					<span className='name__letter'>a</span>
 					<span className='name__letter'>m</span>
-          			&nbsp;&nbsp;
+					&nbsp;&nbsp;
 					<span className='name__letter--lname'>B</span>
 					<span className='name__letter--lname'>e</span>
 					<span className='name__letter--lname'>l</span>
@@ -42,7 +47,7 @@ export default class LaunchPage extends Component {
 						<span className='launch-page__link'>Projects</span>
 					</Link>
 					{/* <span className='launch-page__link--seperator'>|</span> */}
-					<a href='https://itunes.apple.com/us/developer/vikram-belde/id1164307305' className='launch-page__link'>Apps</a>
+					{/* <a href='https://itunes.apple.com/us/developer/vikram-belde/id1164307305' className='launch-page__link'>Apps</a> */}
 					{/* <span className='launch-page__link--seperator'>|</span> */}
 					<a href='https://www.linkedin.com/in/vikrambelde/' className='launch-page__link'>LinkedIn</a>
 					{/* <span className='launch-page__link--seperator'>|</span> */}
