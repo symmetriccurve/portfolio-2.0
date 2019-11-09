@@ -43,7 +43,7 @@ and yeah, I also catch up with 🎶 🎵podcasts if I am sick of reading 😅.
 
 ---
 
-### What are the few things you look for when you review another developer's code ?
+### What do you look for when you do a code review?
 
 I look for code consistency✅, reusability📦 and readability📖 of the code. I focus more on readability and maintainability📁 of the code on top of anything else, I strongly believe a well written code is nothing more than a well maintainable code.
 
