@@ -14,7 +14,9 @@ and it makes me feel like having an iron man suit build in a Cave.
 
 ![](https://vignette.wikia.nocookie.net/ironman/images/b/bf/Ch-200003885000.png/revision/latest?cb=20190727114446)
 
-But I 
+though it has the same power, people would appreciate this
+
+![](https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/8/86/Dd3g1tt-ab27d5a1-fb0b-4b36-9e90-53c134b6355e.png/revision/latest?cb=20190401222437)
 
 After all the struggle of going over many tutorials, udemy course, blogspots, articles on writing better CSS. I was not able to achieve what I am looking for. 
 
