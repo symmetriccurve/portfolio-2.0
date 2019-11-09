@@ -1,5 +1,7 @@
 ## CSS__is-not--Hard/Easy
 
+
+![](https://qph.fs.quoracdn.net/main-qimg-c2427582788d7117089771da01f605d5)
 #### CSS to me is like Kryptonite to Superman.
 I have very strong React skills (I overheard from a co-developer in my Team- I embrace it),  
 but I was always vulnerable to CSS.   When I’m into a new project, I am always excited about the functionalities I will build. 
@@ -20,3 +22,5 @@ Hmmmm. . . . I am applying a random solution to a problem with out completely un
 It time to invest more time in to my CSS skills. 
 
 [Why is CSS so frustrating?](https://qr.ae/TWkARz)
+
+
