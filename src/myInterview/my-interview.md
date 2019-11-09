@@ -14,7 +14,11 @@ Flying Drones, prototyping, 3d printing and making react tutorials.
 ---
 
 ### What is that your most proud of in terms of coding ?
-I think I am proud of coding [mine-sweeper](https://github.com/symmetriccurve/minesweeper-with-react) using React.
+My answer: I build a [mine-sweeper💣](https://github.com/symmetriccurve/minesweeper-with-react) from the scratch using reactjs ⚛.
+
+Few other things, 
+1. I coded a python script that scans through the directory structure of react project and adds unit test templates to start with 
+2. My portfolio
 
 ---
 
@@ -25,3 +29,31 @@ I like building developer tools which can help developers to build more better t
 
 ### What is a fun fact about you ?
 I can match a 3X3 Rubix cube in less than 3 minutes
+
+---
+
+### How do you keep up with the technologies ?
+I think there is no other industry that is changing as rapidly as software development😭. I set aside at-least 30 minutes 🕔 🕠 of my time to keep up to date with the technologies.
+
+I avidly follow 🐶hacker news for all my tech updates, each news link takes to different websites.
+
+I look at stackoverflow top questions🔥, I also love to read popular medium stories from the developers from top tech companies.
+
+and yeah, I also catch up with 🎶 🎵podcasts if I am sick of reading 😅.
+
+---
+### What are the few things you look for when you review another developer's code ?
+
+I look for code consistency✅, reusability📦 and readability📖 of the code. I focus more on readability and maintainability📁 of the code on top of anything else, I strongly believe a well written code is nothing more than a well maintainable code.
+
+Few other things I look for is CONSTANTS, let's say I am reviewing the code of the developer who written a function to enable Place Order button only if minimum amount of order is met, he can simply if( cartTotal > 50 ),
+
+For a new developer🐣 who is reading through this code, he has no clue about this magic number(50) appear from no where🙇, I always insist in creating a constants file and have constant something like const MINIMUM_ORDER_TO_SHIP = 50 👏 then use the constant.
+
+if( cartTotal > MINIMUM_ORDER_TO_SHIP) 👍 makes the easier to read and maintain🎉, if the company decides to make changes to minimum order, I don't have to dig⚓️ through the files to find this if loop to alter the minimum order to ship, rather I would looks for constants file and make the changes accordingly.
+
+Few other things I look for are
+
+Indentation
+Naming conventions
+Code comments if the block of code has any edge case(Example: like if a coupon is applied, then no minium order is required)
