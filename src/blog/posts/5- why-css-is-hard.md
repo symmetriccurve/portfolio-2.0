@@ -10,7 +10,7 @@ I would built the prototype over couple of hours and rush to the product owner i
 I would lay bunch of elements lying on the UI doing exactly what they are suppose to do. . . 
 But a Button is overlapped by an image, and icon are scattered as if they are poured on the screen by a dumpster. 
 
-and it makes me feel like having an iron man suit build in a Cave. 
+and it makes me feel like having an iron man suit made out of scrap. 
 
 ![](https://vignette.wikia.nocookie.net/ironman/images/b/bf/Ch-200003885000.png/revision/latest?cb=20190727114446)
 
