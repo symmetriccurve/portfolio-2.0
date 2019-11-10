@@ -34,13 +34,10 @@ I can match a 3X3 Rubix cube in less than 3 minutes
 
 ### How do you keep up with the technologies ?
 I think there is no other industry that is changing as rapidly as software development😭. I set aside at-least 30 minutes 🕔 🕠 of my time to keep up to date with the technologies.
-
 I avidly follow 🐶hacker news for all my tech updates, each news link takes to different websites.
-
 I look at stackoverflow top questions🔥, I also love to read popular medium stories from the developers from top tech companies.
 
 and yeah, I also catch up with 🎶 🎵podcasts if I am sick of reading 😅.
-
 ---
 
 ### What do you look for when you do a code review?
