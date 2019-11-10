@@ -1,8 +1,16 @@
 .my-interview { 
-    padding: 3%;
+    padding: 50px;
     background-color: white;
     margin: 10px;
     box-shadow: -1px 2px 7px -2px rgba(125,123,125,1);
+
+    h3 {
+        margin: 0%;
+    }
+
+    p{
+        margin: 0px 0px 20px 0px;
+    }
 
     a{
         color: black;
