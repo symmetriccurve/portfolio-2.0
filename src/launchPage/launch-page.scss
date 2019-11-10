@@ -63,6 +63,10 @@
     text-decoration: none;
     margin: 0 10px;
 
+    &:hover {
+      text-decoration: underline;
+    }
+
     @include tablet{
       color: white;
       font-size: 3vw;

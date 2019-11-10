@@ -15,8 +15,8 @@ After all the struggle of going over many tutorials, udemy course, blogspots, ar
 
 So I set back my self a little bit and asked me what is stopping to learn CSS which has simple elegant user friendly syntax.
 Hmmmm. . . . I am applying a random solution to a problem with out completely understanding the problem.( The bad part is that my problem have more possible solutions than any other).   Now analyzing the problem i found a deep rooted cause. 
- I always underestimated this beautiful language thinking it is all about margins and paddings and with few trial and errors, I should be able to get it. 
+ I always underestimated this beautiful language thinking it is all about margins and paddings and with few trial and errors, I should be able to get it. I was wrong in every possible dimension in the universe. 
 
-It time to invest more time in to my CSS skills. 
+It's high time to invest more time in to my CSS skills. 
 
 [Why is CSS so frustrating?](https://qr.ae/TWkARz)
