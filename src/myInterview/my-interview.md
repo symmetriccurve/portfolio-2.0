@@ -14,11 +14,11 @@ Flying Drones, prototyping, 3d printing and making react tutorials.
 ---
 
 ### What is that you build that you are most proud of ?
-I build a [mine-sweeper](https://github.com/symmetriccurve/minesweeper-with-react)💣 from the scratch using reactjs ⚛.
+I made a [mine-sweeper](https://github.com/symmetriccurve/minesweeper-with-react)💣 from the scratch using reactjs ⚛.
 
 Few other things, 
-1. I coded a python script that scans through the directory structure of react project and adds unit test boilerplate template.
-2. My portfolio
+- I coded a python script that scans through the directory structure of react project and adds unit test boilerplate template.
+- My portfolio
 
 ---
 
