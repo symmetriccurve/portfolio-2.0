@@ -35,9 +35,9 @@ I can match a 3X3 Rubix cube in less than 3 minutes
 ### How do you keep up with the technologies ?
 I think there is no other industry that is changing as rapidly as software development😭. I set aside at-least 30 minutes 🕔 🕠 of my time to keep up to date with the technologies.
 I avidly follow 🐶hacker news for all my tech updates, each news link takes to different websites.
-I look at stackoverflow top questions🔥, I also love to read popular medium stories from the developers from top tech companies.
 
-and yeah, I also catch up with 🎶 🎵podcasts if I am sick of reading 😅.
+I look at stackoverflow top questions🔥, I also love to read popular medium stories from the developers from top tech companies. And yeah, I also catch up with 🎶 🎵podcasts if I am sick of reading 😅.
+
 ---
 
 ### What do you look for when you do a code review?
@@ -51,7 +51,6 @@ For a new developer🐣 who is reading through this code, he has no clue about t
 if( cartTotal > MINIMUM_ORDER_TO_SHIP) 👍 makes the easier to read and maintain🎉, if the company decides to make changes to minimum order, I don't have to dig⚓️ through the files to find this if condition to alter the minimum order to ship, rather I would look for constants file and make the changes accordingly.
 
 Few other things I look for are
-
-Indentation
-Naming conventions
-Code comments if the block of code has any edge case(Example: like if a coupon is applied, then no minium order is required)
+- Indentation
+- Naming conventions
+- Code comments if the block of code has any edge case(Example: like if a coupon is applied, then no minium order is required)
