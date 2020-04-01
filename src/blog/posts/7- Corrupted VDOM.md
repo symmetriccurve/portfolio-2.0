@@ -22,8 +22,8 @@ Let’s imaging a scenario when `VDOM`  made a copy of `REAL DOM` and some other
 
 ``` html
 <div> 
-	<span> Foo </span>
-	<span> Bar </span>
+  <span> Foo </span>
+  <span> Bar </span>
 <div>
 ```
 Now, think in the VDOM the structure of Real DOM is this, now JQuery comes in to picture and updates the DOM to 
@@ -31,7 +31,7 @@ Now, think in the VDOM the structure of Real DOM is this, now JQuery comes in to
 
 ```html
 <div> 
-	<span> Foo </span>
+  <span> Foo </span>
 <div>
 ```
 
@@ -39,8 +39,8 @@ which deletes the bar `<span>`, now react performs(in a [declarative way]([https
 
 ```html
 <div> 
-	<span> Foo </span>
-	<span> Baz </span>
+  <span> Foo </span>
+  <span> Baz </span>
 <div>
 ```
 
