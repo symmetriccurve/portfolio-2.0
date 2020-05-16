@@ -1,0 +1,27 @@
+
+### Private NPM registry
+
+We as javascript developer heavily(or completely !) depend on the node_modules, we pretty much have npm package for every little thing - there is even a package to add 2 number, I know I know, any body can create a package(a package is one of more javascript files) and push it to Npm Registry).
+
+#### Wait What is a Registry ??
+Registry is just a fancy word for database, this is where all the node_modules are stored and by default the NPM sets the path to the database by giving a Registry URL( [https://registry.npmjs.org](https://registry.npmjs.org))
+
+But this is a public registry(an URL that is accessible to public), it’s open source and every developer have access to this. But this does not work in an organizational level, an organization never wants to expose its packages to developers outside the network. Now, here comes a private Npm Registry(you can have your own Private Npm registry if you are paid Npm user).
+
+To check which URL(registry URL) that the npm is pointing to just do
+
+  > npm list config
+
+```javascript  
+metrics-registry = "https://registry.npmjs.org/"
+```
+Make the NPM point to your organizational URL by
+
+> npm config set registry [https://fancycompany.com](https://fancycompany.com)
+
+#### What happens if I do not set my Organization registry URL ?
+Npm tries to fetch the private packages from "https://registry.npmjs.org/" which would fail as packages are not available on public registry.
+
+ 
+#### If I set to Private Registry URL will i get access to Public packages ?
+Absolutely, any package which is not available on the private registry is rerouted to get it from public registry ( there can be various security rules around this configuration, per say, an organization can block installing certain malicious packages)
