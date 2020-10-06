@@ -59,7 +59,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "go-live": "rm -rf docs && npm run build && mv build docs && git add docs && git commit -m 'Bundle build with changes' && git push"
   },
   "eslintConfig": {
     "extends": "react-app"
