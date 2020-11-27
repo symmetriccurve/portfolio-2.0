@@ -6,6 +6,7 @@ import Loader from "react-loaders";
 import "loaders.css/src/animations/ball-rotate.scss";
 import urls from "../data-layer/urls";
 import { Divider, Tag, Radio, Button } from "antd";
+import { CloseOutlined, PlusOutlined } from "@ant-design/icons";
 
 const { CheckableTag } = Tag;
 
@@ -30,14 +31,7 @@ const getResponse = async (url) => {
 export default class iQuestions extends Component {
   state = {
     markDown: [],
-    visibleTaggedCategory: [
-      "ReactJs",
-      "CSS",
-      "Javascript",
-      "Scenario",
-      "Work Flow",
-      "React Native",
-    ],
+    visibleTaggedCategory: [],
     react: [],
     css: [],
     javascript: [],
@@ -56,17 +50,53 @@ export default class iQuestions extends Component {
     } else {
       visibleTaggedCategory = [...visibleTaggedCategory, tag];
     }
-    this.setState({
-      visibleTaggedCategory,
-    });
+    this.setState(
+      {
+        visibleTaggedCategory,
+      },
+      () => this.updateURL()
+    );
+  };
+
+  updateURL = () => {
+    const { searchString, visibleTaggedCategory } = this.state;
+    const searchStringParam = searchString ? `search=${searchString}` : "";
+    const tagsParam = !visibleTaggedCategory.length
+      ? ""
+      : `tags=${visibleTaggedCategory.join(",")}`;
+
+    this.props.history.replace(
+      `/interviewQuestions?${searchStringParam}&${tagsParam}`
+    );
   };
 
   async componentDidMount() {
-    const urlParams = this.props.location.search.split("=")[1];
-    const searchStr = urlParams ? urlParams.replace(/%20/g, " ") : "";
-    this.setState({ searchStr });
-    let calls = [];
-    let markDown = [];
+    // TODO: Cleanup URL param parsing
+    let paramString = this.props.location.search.split("?")[1] || "";
+    let [searchStringParams = "", tagParams = ""] = paramString
+      .replace(/%20/g, " ")
+      .split("&");
+    if (searchStringParams) {
+      searchStringParams = searchStringParams.split("=")[1];
+    }
+
+    if (tagParams) {
+      if (tagParams.split("=")[1]) {
+        tagParams = tagParams.split("=")[1];
+        if (tagParams) {
+          tagParams = tagParams.split(",");
+        }
+      } else {
+        tagParams = [];
+      }
+    } else {
+      tagParams = [];
+    }
+
+    this.setState({
+      searchString: searchStringParams,
+      visibleTaggedCategory: tagParams,
+    });
     const react = await getResponse(urls.iQuestions.reactQuestionsURL);
     const css = await getResponse(urls.iQuestions.cssQuestionsURL);
     const javascript = await getResponse(
@@ -81,52 +111,27 @@ export default class iQuestions extends Component {
       scenario,
       workFlow,
     });
-    // debugger;
-    // urls.iQuestions.forEach((eachURL) => {
-    //   calls.push(fetch(eachURL).then((res) => res.text()));
-    // });
-
-    // Promise.all(calls)
-    //   .then((topics) => {
-    //     topics.forEach((topic) => {
-    //       markDown = markDown.concat(topic.split("---"));
-    //     });
-    //     this.setState(
-    //       {
-    //         markDown,
-    //         filtered: markDown,
-    //       },
-    //       () => this.handleSearch(searchStr)
-    //     );
-    //   })
-    //   .catch((err) => {
-    //     console.log("Error fetching interview questions", err);
-    //   });
   }
 
   handleSearch = ({ target: { value: searchString } }) => {
-    this.setState({
-      searchString,
-    });
-    this.props.history.replace(`/interviewQuestions?search=${searchString}`);
-    // markDown.forEach((each) => {
-    //   if (each.toLowerCase().indexOf(searchStr.toLowerCase()) > -1) {
-    //     //each = each.replace(value,`<mark>${ value }</mark>`)
-    //     /*
-    // 				TO-DO: FIX SEARCH
-    // 				This highlight is not highlighting capital case match and replacing
-    // 				text with in the code(A BIG NO NO)
-    // 			*/
-    //     filtered.push(each);
-    //   }
-    // });
-    // this.setState({
-    //   filtered,
-    // });
+    this.setState(
+      {
+        searchString,
+      },
+      () => this.updateURL()
+    );
   };
 
   handleFilter = (e) => {
     this.setState({});
+  };
+
+  shouldRender = (category) => {
+    const { visibleTaggedCategory } = this.state;
+    return (
+      visibleTaggedCategory.length == 0 ||
+      visibleTaggedCategory.indexOf(category) > -1
+    );
   };
 
   render() {
@@ -146,24 +151,56 @@ export default class iQuestions extends Component {
       <Layout>
         <div className="markdown">
           <div className="markdown__search-bar">
-            <input
-              className="markdown__search-bar__input"
-              placeholder="Search"
-              value={searchString}
-              onChange={this.handleSearch}
-            />
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                backgroundColor: "white",
+                borderRadius: "25px",
+                alignItems: "center",
+                overflow: "hidden",
+                width: "100%",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  backgroundColor: "white",
+                  borderRadius: "25px",
+                  justifyContent: "flex-start",
+                  marginLeft: "15px",
+                }}
+              >
+                {visibleTaggedCategory.map((tag) => {
+                  return (
+                    <Tag
+                      key={tag}
+                      closeIcon={<CloseOutlined style={{ fontSize: "12px" }} />}
+                      style={{
+                        padding: "5px 10px",
+                        borderRadius: "5px",
+                        cursor: "pointer",
+                        fontWeight: "bold",
+                        userSelect: "none",
+                      }}
+                      closable
+                      color={tagColor[tag]}
+                      onClose={() => this.handleTagClick(tag)}
+                      onClick={() => this.handleTagClick(tag)}
+                    >
+                      {tag}
+                    </Tag>
+                  );
+                })}
+              </div>
+              <input
+                placeholder="Search"
+                value={searchString}
+                onChange={this.handleSearch}
+              />
+            </div>
           </div>
-          {/* <Radio.Group
-            value="javascript"
-            style={{ display: "flex", justifyContent: "center" }}
-            onChange={this.handleFilter}
-          >
-            <Radio.Button value="react">React</Radio.Button>
-            <Radio.Button value="reactnNative">React Native</Radio.Button>
-            <Radio.Button value="javascript">Javascript</Radio.Button>
-            <Radio.Button value="scenario">Scenario</Radio.Button>
-            <Radio.Button value="workFlow">Work Flow</Radio.Button>
-          </Radio.Group> */}
           <div
             style={{
               display: "flex",
@@ -172,22 +209,36 @@ export default class iQuestions extends Component {
               flexWrap: "wrap",
             }}
           >
-            <span style={{ margin: 8 }}>Filter By:</span>
+            {!(visibleTaggedCategory.length === tagsData.length) && (
+              <span style={{ margin: 8 }}>Add Tags:</span>
+            )}
             {tagsData.map((tag) => {
               const isSelected = visibleTaggedCategory.indexOf(tag) > -1;
               return (
-                <CheckableTag
-                  style={{
-                    background: isSelected ? tagColor[tag] : "white",
-                    padding: " 5px 10px 5px 10px",
-                    margin: "10px",
-                  }}
-                  key={tag}
-                  checked={isSelected}
-                  onChange={(checked) => this.handleTagClick(tag, checked)}
-                >
-                  {tag}
-                </CheckableTag>
+                !isSelected && (
+                  <Tag
+                    key={tag}
+                    closeIcon={
+                      <PlusOutlined
+                        style={{ fontSize: "12px", color: "white" }}
+                      />
+                    }
+                    style={{
+                      padding: "5px 10px",
+                      borderRadius: "5px",
+                      cursor: "pointer",
+                      fontWeight: "bold",
+                      color: "white",
+                      userSelect: "none",
+                    }}
+                    closable
+                    color={tagColor[tag]}
+                    onClose={() => this.handleTagClick(tag)}
+                    onClick={() => this.handleTagClick(tag)}
+                  >
+                    {tag}
+                  </Tag>
+                )
               );
             })}
           </div>
@@ -200,41 +251,35 @@ export default class iQuestions extends Component {
               <Loader className="markdown__loader" type="ball-rotate" />
             </div>
           )}
-          {/* 
-          {markDown.length && !filtered.length && (
-            <div>
-              <span className="center">No Results</span>
-            </div>
-          )} */}
-          {visibleTaggedCategory.indexOf("ReactJs") > -1 && (
+          {this.shouldRender("ReactJs") && (
             <Questions
               questions={react}
               tags={["ReactJs"]}
               searchString={searchString}
             />
           )}
-          {visibleTaggedCategory.indexOf("CSS") > -1 && (
+          {this.shouldRender("CSS") && (
             <Questions
               questions={css}
               tags={["CSS"]}
               searchString={searchString}
             />
           )}
-          {visibleTaggedCategory.indexOf("Javascript") > -1 && (
+          {this.shouldRender("Javascript") && (
             <Questions
               questions={javascript}
               tags={["Javascript"]}
               searchString={searchString}
             />
           )}
-          {visibleTaggedCategory.indexOf("Scenario") > -1 && (
+          {this.shouldRender("Scenario") && (
             <Questions
               questions={scenario}
               tags={["Scenario"]}
               searchString={searchString}
             />
           )}
-          {visibleTaggedCategory.indexOf("Work Flow") > -1 && (
+          {this.shouldRender("Work Flow") && (
             <Questions
               questions={workFlow}
               tags={["Work Flow"]}
@@ -250,7 +295,7 @@ export default class iQuestions extends Component {
 const tagColor = {
   ReactJs: "#2db7f5",
   CSS: "#f52df1bf",
-  Javascript: "#f1dd07c9",
+  Javascript: "#fa8a06",
   Scenario: "#81cc02c9",
   "Work Flow": "#395dffb0",
   "React Native": "#0f68e7",
@@ -260,7 +305,10 @@ const Questions = React.memo(({ questions, tags, searchString }) => {
   return (
     <div>
       {questions.map((question) => {
-        if (searchString && question.indexOf(searchString) > -1) {
+        if (
+          searchString &&
+          question.toLowerCase().indexOf(searchString.toLowerCase()) > -1
+        ) {
           return <QuestionCard content={question} key={question} tags={tags} />;
         } else if (!searchString) {
           return <QuestionCard content={question} key={question} tags={tags} />;

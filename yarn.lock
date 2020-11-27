@@ -210,10 +210,10 @@ ansi-styles@^3.0.0, ansi-styles@^3.2.0, ansi-styles@^3.2.1:
   dependencies:
     color-convert "^1.9.0"
 
-antd@^4.8.5:
-  version "4.8.5"
-  resolved "https://registry.npmjs.org/antd/-/antd-4.8.5.tgz#eb0af8154a6dffb070c016b344d4b49b6910ce4f"
-  integrity sha512-QN8//mMToHo1u7gRThbVYKW9rqdN+2x/5PAk5d76MkeALezE3J2Tf4mm2+COUf0qUNiV0ZNtdcLY3weTVlKpDg==
+antd@^4.8.6:
+  version "4.8.6"
+  resolved "https://registry.npmjs.org/antd/-/antd-4.8.6.tgz#8606c22815e13af096e577fb018737de72d54d39"
+  integrity sha512-UhpODlcsUhBKgXulr8OmG9mEdFSSfk3hTq1lfO1HETxaOOEFnd3nSLiGCpELTGAUH9mlQPvoL+ccSXs/Q/9Zbw==
   dependencies:
     "@ant-design/colors" "^5.0.0"
     "@ant-design/css-animation" "^1.7.2"
@@ -6524,9 +6524,9 @@ rc-resize-observer@^0.2.0, rc-resize-observer@^0.2.1, rc-resize-observer@^0.2.3:
     resize-observer-polyfill "^1.5.1"
 
 rc-select@^11.1.1:
-  version "11.5.1"
-  resolved "https://registry.npmjs.org/rc-select/-/rc-select-11.5.1.tgz#f0a97e52fb9f4295e6abbc300c030d54206f4e16"
-  integrity sha512-zjLOOcJyvoeOuIrBngJsrqvgejgijTZkjSK5CIaQN452A1WpnjOnORU7WA2f1bwu4rKNjSiUy/TWLBqG+EuyUA==
+  version "11.5.2"
+  resolved "https://registry.npmjs.org/rc-select/-/rc-select-11.5.2.tgz#554f1c0e82c854642c410677c458f888b20c2306"
+  integrity sha512-DC1dtUUdbCUDMphiDHSCuSZMS9OJLoqxdJQQLvXxdnV6pgVl0NK38gPtrqAVgijG9SNo9SnImPUaYQjUDnYRcQ==
   dependencies:
     "@babel/runtime" "^7.10.1"
     classnames "2.x"
@@ -6744,14 +6744,15 @@ react-dev-utils@^5.0.2:
     strip-ansi "3.0.1"
     text-table "0.2.0"
 
-react-dom@17.0.1:
-  version "17.0.1"
-  resolved "https://registry.npmjs.org/react-dom/-/react-dom-17.0.1.tgz#1de2560474ec9f0e334285662ede52dbc5426fc6"
-  integrity sha512-6eV150oJZ9U2t9svnsspTMrWNyHc6chX0KzDeAOXftRa8bNeOKTTfCJ7KorIwenkHd2xqVTBTCZd79yk/lx/Ug==
+react-dom@^16.5.2:
+  version "16.14.0"
+  resolved "https://registry.npmjs.org/react-dom/-/react-dom-16.14.0.tgz#7ad838ec29a777fb3c75c3a190f661cf92ab8b89"
+  integrity sha512-1gCeQXDLoIqMgqD3IO2Ah9bnf0w9kzhwN5q4FGnHZ67hBm9yePzB5JJAIQCc8x3pFnNlwFq4RidZggNAAkzWWw==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
-    scheduler "^0.20.1"
+    prop-types "^15.6.2"
+    scheduler "^0.19.1"
 
 react-draft-wysiwyg@^1.12.13:
   version "1.13.2"
@@ -6851,13 +6852,14 @@ react-transition-group@^2.3.1:
     prop-types "^15.6.2"
     react-lifecycles-compat "^3.0.4"
 
-react@17.0.1:
-  version "17.0.1"
-  resolved "https://registry.npmjs.org/react/-/react-17.0.1.tgz#6e0600416bd57574e3f86d92edba3d9008726127"
-  integrity sha512-lG9c9UuMHdcAexXtigOZLX8exLWkW0Ku29qPRU8uhF2R9BN96dLCt0psvzPLlHc5OWkgymP3qwTRgbnw5BKx3w==
+react@^16.5.2:
+  version "16.14.0"
+  resolved "https://registry.npmjs.org/react/-/react-16.14.0.tgz#94d776ddd0aaa37da3eda8fc5b6b18a4c9a3114d"
+  integrity sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
+    prop-types "^15.6.2"
 
 reactstrap@^6.5.0:
   version "6.5.0"
@@ -7316,10 +7318,10 @@ sax@>=0.6.0, sax@^1.2.1, sax@^1.2.4, sax@~1.2.1:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
 
-scheduler@^0.20.1:
-  version "0.20.1"
-  resolved "https://registry.npmjs.org/scheduler/-/scheduler-0.20.1.tgz#da0b907e24026b01181ecbc75efdc7f27b5a000c"
-  integrity sha512-LKTe+2xNJBNxu/QhHvDR14wUXHRQbVY5ZOYpOGWRzhydZUqrLb2JBvLPY7cAqFmqrWuDED0Mjk7013SZiOz6Bw==
+scheduler@^0.19.1:
+  version "0.19.1"
+  resolved "https://registry.npmjs.org/scheduler/-/scheduler-0.19.1.tgz#4f3e2ed2c1a7d65681f4c854fa8c5a1ccb40f196"
+  integrity sha512-n/zwRWRYSUj0/3g/otKDRPMh6qv2SYMWNq85IEa8iZyAv8od9zDYpGSnpBEjNgcMNq6Scbu5KfIPxNF72R/2EA==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"

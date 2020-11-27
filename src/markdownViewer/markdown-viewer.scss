@@ -55,19 +55,20 @@
 
     input {
       height: 50px;
-      width: 98%;
+      width: 47%;
       text-decoration: none;
-      border-radius: 25px;
+      //border-radius: 25px;
       font-family: $primary-font;
       font-weight: bold;
+      display: flex;
       //text-align: center;
-      padding-left: 25px;
-      font-size: 1em;
-      box-shadow: -1px 2px 7px -2px #7d7b7d5c;
+      //padding-left: 25px;
+      font-size: 1.1em;
+      // box-shadow: -1px 2px 7px -2px #7d7b7d5c;
       border: none;
 
       &:hover {
-        box-shadow: -1px 2px 7px -2px rgb(87, 87, 87);
+        // box-shadow: -1px 2px 7px -2px rgb(87, 87, 87);
       }
       &:focus {
         outline: none;
