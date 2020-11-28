@@ -5,7 +5,7 @@ import Layout from "../layout/Layout";
 import Loader from "react-loaders";
 import "loaders.css/src/animations/ball-rotate.scss";
 import urls from "../data-layer/urls";
-import { Divider, Tag, Radio, Button } from "antd";
+import { Divider, Tag } from "antd";
 import { CloseOutlined, PlusOutlined } from "@ant-design/icons";
 
 const { CheckableTag } = Tag;
@@ -15,8 +15,13 @@ const tagsData = [
   "React Native",
   "CSS",
   "Javascript",
+  "HTML",
   "Scenario",
   "Work Flow",
+  "Frequently Asked",
+  "Webpack",
+  "Redux",
+  "Agile",
 ];
 
 const getResponse = async (url) => {
@@ -31,9 +36,11 @@ const getResponse = async (url) => {
 export default class iQuestions extends Component {
   state = {
     markDown: [],
-    visibleTaggedCategory: [],
+    selectedTags: [],
     react: [],
     css: [],
+    javascript: [],
+    html: [],
     javascript: [],
     scenario: [],
     workFlow: [],
@@ -42,28 +49,26 @@ export default class iQuestions extends Component {
   };
 
   handleTagClick = (tag) => {
-    let visibleTaggedCategory = [...this.state.visibleTaggedCategory];
-    if (visibleTaggedCategory.indexOf(tag) > -1) {
-      visibleTaggedCategory = visibleTaggedCategory.filter(
-        (item) => item !== tag
-      );
+    let selectedTags = [...this.state.selectedTags];
+    if (selectedTags.indexOf(tag) > -1) {
+      selectedTags = selectedTags.filter((item) => item !== tag);
     } else {
-      visibleTaggedCategory = [...visibleTaggedCategory, tag];
+      selectedTags = [...selectedTags, tag];
     }
     this.setState(
       {
-        visibleTaggedCategory,
+        selectedTags,
       },
       () => this.updateURL()
     );
   };
 
   updateURL = () => {
-    const { searchString, visibleTaggedCategory } = this.state;
+    const { searchString, selectedTags } = this.state;
     const searchStringParam = searchString ? `search=${searchString}` : "";
-    const tagsParam = !visibleTaggedCategory.length
+    const tagsParam = !selectedTags.length
       ? ""
-      : `tags=${visibleTaggedCategory.join(",")}`;
+      : `tags=${selectedTags.join(",")}`;
 
     this.props.history.replace(
       `/interviewQuestions?${searchStringParam}&${tagsParam}`
@@ -95,7 +100,7 @@ export default class iQuestions extends Component {
 
     this.setState({
       searchString: searchStringParams,
-      visibleTaggedCategory: tagParams,
+      selectedTags: tagParams,
     });
     const react = await getResponse(urls.iQuestions.reactQuestionsURL);
     const css = await getResponse(urls.iQuestions.cssQuestionsURL);
@@ -104,12 +109,14 @@ export default class iQuestions extends Component {
     );
     const scenario = await getResponse(urls.iQuestions.scenarioQuestionsURL);
     const workFlow = await getResponse(urls.iQuestions.workFlowQuestionsURL);
+    const html = await getResponse(urls.iQuestions.htmlQuestionsURL);
     this.setState({
       react,
       css,
       javascript,
       scenario,
       workFlow,
+      html,
     });
   }
 
@@ -127,11 +134,8 @@ export default class iQuestions extends Component {
   };
 
   shouldRender = (category) => {
-    const { visibleTaggedCategory } = this.state;
-    return (
-      visibleTaggedCategory.length == 0 ||
-      visibleTaggedCategory.indexOf(category) > -1
-    );
+    const { selectedTags } = this.state;
+    return selectedTags.length == 0 || selectedTags.indexOf(category) > -1;
   };
 
   render() {
@@ -145,7 +149,7 @@ export default class iQuestions extends Component {
       html,
       css,
       javascript,
-      visibleTaggedCategory,
+      selectedTags,
     } = this.state;
     return (
       <Layout>
@@ -172,7 +176,7 @@ export default class iQuestions extends Component {
                   marginLeft: "15px",
                 }}
               >
-                {visibleTaggedCategory.map((tag) => {
+                {selectedTags.map((tag) => {
                   return (
                     <Tag
                       key={tag}
@@ -209,11 +213,11 @@ export default class iQuestions extends Component {
               flexWrap: "wrap",
             }}
           >
-            {!(visibleTaggedCategory.length === tagsData.length) && (
+            {!(selectedTags.length === tagsData.length) && (
               <span style={{ margin: 8 }}>Add Tags:</span>
             )}
             {tagsData.map((tag) => {
-              const isSelected = visibleTaggedCategory.indexOf(tag) > -1;
+              const isSelected = selectedTags.indexOf(tag) > -1;
               return (
                 !isSelected && (
                   <Tag
@@ -251,41 +255,36 @@ export default class iQuestions extends Component {
               <Loader className="markdown__loader" type="ball-rotate" />
             </div>
           )}
-          {this.shouldRender("ReactJs") && (
-            <Questions
-              questions={react}
-              tags={["ReactJs"]}
-              searchString={searchString}
-            />
-          )}
-          {this.shouldRender("CSS") && (
-            <Questions
-              questions={css}
-              tags={["CSS"]}
-              searchString={searchString}
-            />
-          )}
-          {this.shouldRender("Javascript") && (
-            <Questions
-              questions={javascript}
-              tags={["Javascript"]}
-              searchString={searchString}
-            />
-          )}
-          {this.shouldRender("Scenario") && (
-            <Questions
-              questions={scenario}
-              tags={["Scenario"]}
-              searchString={searchString}
-            />
-          )}
-          {this.shouldRender("Work Flow") && (
-            <Questions
-              questions={workFlow}
-              tags={["Work Flow"]}
-              searchString={searchString}
-            />
-          )}
+          <Questions
+            questions={react}
+            selectedTags={selectedTags}
+            searchString={searchString}
+          />
+          <Questions
+            questions={css}
+            selectedTags={selectedTags}
+            searchString={searchString}
+          />
+          <Questions
+            questions={javascript}
+            selectedTags={selectedTags}
+            searchString={searchString}
+          />
+          <Questions
+            questions={html}
+            selectedTags={selectedTags}
+            searchString={searchString}
+          />
+          <Questions
+            questions={scenario}
+            selectedTags={selectedTags}
+            searchString={searchString}
+          />
+          <Questions
+            questions={workFlow}
+            selectedTags={selectedTags}
+            searchString={searchString}
+          />
         </div>
       </Layout>
     );
@@ -299,19 +298,61 @@ const tagColor = {
   Scenario: "#81cc02c9",
   "Work Flow": "#395dffb0",
   "React Native": "#0f68e7",
+  "Frequently Asked": "#ef0404c7",
+  Webpack: "#026abe",
+  Redux: "#764abc",
+  Agile: "#02804bc7",
+  HTML: "#f06529",
+};
+const shouldShowQuestion = (
+  parsedContent,
+  parsedTags,
+  selectedTags,
+  searchString
+) => {
+  if (searchString === "") {
+    if (selectedTags.length === 0) {
+      return true;
+    } else {
+      return selectedTags.every((val) => parsedTags.includes(val));
+      // Below line will make the tags work as in OR condition while above line works and AND
+      //return parsedTags.some((tag) => selectedTags.includes(tag));
+    }
+  } else {
+    if (selectedTags.length === 0) {
+      return selectedTags.every((val) => parsedTags.includes(val));
+      // return (
+      //   parsedContent.toLowerCase().indexOf(searchString.toLowerCase()) > -1
+      // );
+    } else {
+      return (
+        parsedTags.some((tag) => selectedTags.includes(tag)) &&
+        parsedContent.toLowerCase().indexOf(searchString.toLowerCase()) > -1
+      );
+    }
+  }
 };
 
-const Questions = React.memo(({ questions, tags, searchString }) => {
+const Questions = React.memo(({ questions, selectedTags, searchString }) => {
   return (
     <div>
       {questions.map((question) => {
+        const { parsedContent, parsedTags } = parseContentAndTags(question);
         if (
-          searchString &&
-          question.toLowerCase().indexOf(searchString.toLowerCase()) > -1
+          shouldShowQuestion(
+            parsedContent,
+            parsedTags,
+            selectedTags,
+            searchString
+          )
         ) {
-          return <QuestionCard content={question} key={question} tags={tags} />;
-        } else if (!searchString) {
-          return <QuestionCard content={question} key={question} tags={tags} />;
+          return (
+            <QuestionCard
+              content={parsedContent}
+              key={`${parsedContent}+${parsedTags.join(",")}`}
+              tags={parsedTags}
+            />
+          );
         }
         return null;
       })}
@@ -319,15 +360,9 @@ const Questions = React.memo(({ questions, tags, searchString }) => {
   );
 });
 
-const QuestionCard = ({ content, tags }) => {
+const QuestionCard = React.memo(({ content, tags }) => {
   return (
     <div className="markdown__card">
-      <Divider />
-      <ReactMarkdown
-        source={content}
-        escapeHtml={false}
-        renderers={{ code: CodeBlock }}
-      />
       <Divider orientation="right">
         {tags.map((tag) => (
           <Tag key={tag} color={tagColor[tag]}>
@@ -335,6 +370,20 @@ const QuestionCard = ({ content, tags }) => {
           </Tag>
         ))}
       </Divider>
+      <ReactMarkdown
+        source={content}
+        escapeHtml={false}
+        renderers={{ code: CodeBlock }}
+      />
+      <Divider />
     </div>
   );
+});
+
+const parseContentAndTags = (content) => {
+  let tags = [];
+  if (content.split("#####").length > 1) {
+    tags = content.split("#####")[1].trim().split(",");
+  }
+  return { parsedTags: tags, parsedContent: content.split("#####")[0] };
 };
