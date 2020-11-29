@@ -223,6 +223,7 @@ export default class iQuestions extends Component {
                       fontWeight: "bold",
                       color: "white",
                       userSelect: "none",
+                      margin: "5px",
                     }}
                     closable
                     color={tagColor[tag]}
