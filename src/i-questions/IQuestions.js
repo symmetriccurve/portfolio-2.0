@@ -7,6 +7,7 @@ import urls from "../data-layer/urls";
 import Layout from "../layout/Layout";
 import { tagColor, tagsData } from "./constants";
 import { QuestionsList } from "./QuestionList";
+import ReactGA from "react-ga";
 
 const getResponse = async (url) => {
   return await fetch(url)
@@ -17,6 +18,7 @@ const getResponse = async (url) => {
       return [];
     });
 };
+
 export default class iQuestions extends Component {
   state = {
     react: [],
@@ -31,6 +33,11 @@ export default class iQuestions extends Component {
   };
 
   handleTagClick = (tag) => {
+    ReactGA.event({
+      category: "Tag",
+      action: "Tag Added",
+      label: tag,
+    });
     let selectedTags = [...this.state.selectedTags];
     if (selectedTags.indexOf(tag) > -1) {
       selectedTags = selectedTags.filter((item) => item !== tag);
@@ -59,6 +66,13 @@ export default class iQuestions extends Component {
 
   async componentDidMount() {
     // TODO: Cleanup URL param parsing
+    ReactGA.initialize("UA-128732492-1", {
+      debug: true,
+      titleCase: false,
+      gaOptions: {
+        userId: 123,
+      },
+    });
     let paramString = this.props.location.search.split("?")[1] || "";
     let [searchStringParams = "", tagParams = ""] = paramString
       .replace(/%20/g, " ")

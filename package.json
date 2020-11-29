@@ -43,6 +43,7 @@
     "react-dev-utils": "^5.0.2",
     "react-dom": "^16.5.2",
     "react-draft-wysiwyg": "^1.12.13",
+    "react-ga": "^3.3.0",
     "react-google-recaptcha": "^1.0.4",
     "react-loaders": "^3.0.1",
     "react-markdown": "^4.0.6",
