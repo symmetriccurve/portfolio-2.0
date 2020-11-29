@@ -1,42 +1,24 @@
 import React, { Component } from "react";
-import ReactMarkdown from "react-markdown";
-import CodeBlock from "../markdownViewer/renderers/codeblocks";
-import Layout from "../layout/Layout";
 import Loader from "react-loaders";
+import { Tag } from "antd";
 import "loaders.css/src/animations/ball-rotate.scss";
-import urls from "../data-layer/urls";
-import { Divider, Tag } from "antd";
 import { CloseOutlined, PlusOutlined } from "@ant-design/icons";
-
-const { CheckableTag } = Tag;
-
-const tagsData = [
-  "ReactJs",
-  "React Native",
-  "CSS",
-  "Javascript",
-  "HTML",
-  "Scenario",
-  "Work Flow",
-  "Frequently Asked",
-  "Webpack",
-  "Redux",
-  "Agile",
-];
+import urls from "../data-layer/urls";
+import Layout from "../layout/Layout";
+import { tagColor, tagsData } from "./constants";
+import { QuestionsList } from "./QuestionList";
 
 const getResponse = async (url) => {
   return await fetch(url)
     .then((response) => response.text())
     .then((responseAsText) => responseAsText.split("---"))
     .catch((error) => {
-      console.log("Something went long fetching questions", error);
+      console.log("Something went wrong fetching questions", error);
       return [];
     });
 };
 export default class iQuestions extends Component {
   state = {
-    markDown: [],
-    selectedTags: [],
     react: [],
     css: [],
     javascript: [],
@@ -44,8 +26,8 @@ export default class iQuestions extends Component {
     javascript: [],
     scenario: [],
     workFlow: [],
+    selectedTags: [],
     searchString: "",
-    filtered: [],
   };
 
   handleTagClick = (tag) => {
@@ -133,16 +115,9 @@ export default class iQuestions extends Component {
     this.setState({});
   };
 
-  shouldRender = (category) => {
-    const { selectedTags } = this.state;
-    return selectedTags.length == 0 || selectedTags.indexOf(category) > -1;
-  };
-
   render() {
     const {
-      markDown,
       searchString,
-      filtered,
       workFlow,
       scenario,
       react,
@@ -255,32 +230,32 @@ export default class iQuestions extends Component {
               <Loader className="markdown__loader" type="ball-rotate" />
             </div>
           )}
-          <Questions
+          <QuestionsList
             questions={react}
             selectedTags={selectedTags}
             searchString={searchString}
           />
-          <Questions
+          <QuestionsList
             questions={css}
             selectedTags={selectedTags}
             searchString={searchString}
           />
-          <Questions
+          <QuestionsList
             questions={javascript}
             selectedTags={selectedTags}
             searchString={searchString}
           />
-          <Questions
+          <QuestionsList
             questions={html}
             selectedTags={selectedTags}
             searchString={searchString}
           />
-          <Questions
+          <QuestionsList
             questions={scenario}
             selectedTags={selectedTags}
             searchString={searchString}
           />
-          <Questions
+          <QuestionsList
             questions={workFlow}
             selectedTags={selectedTags}
             searchString={searchString}
@@ -290,100 +265,3 @@ export default class iQuestions extends Component {
     );
   }
 }
-
-const tagColor = {
-  ReactJs: "#2db7f5",
-  CSS: "#f52df1bf",
-  Javascript: "#fa8a06",
-  Scenario: "#81cc02c9",
-  "Work Flow": "#395dffb0",
-  "React Native": "#0f68e7",
-  "Frequently Asked": "#ef0404c7",
-  Webpack: "#026abe",
-  Redux: "#764abc",
-  Agile: "#02804bc7",
-  HTML: "#f06529",
-};
-const shouldShowQuestion = (
-  parsedContent,
-  parsedTags,
-  selectedTags,
-  searchString
-) => {
-  if (searchString === "") {
-    if (selectedTags.length === 0) {
-      return true;
-    } else {
-      return selectedTags.every((val) => parsedTags.includes(val));
-      // Below line will make the tags work as in OR condition while above line works and AND
-      //return parsedTags.some((tag) => selectedTags.includes(tag));
-    }
-  } else {
-    if (selectedTags.length === 0) {
-      return selectedTags.every((val) => parsedTags.includes(val));
-      // return (
-      //   parsedContent.toLowerCase().indexOf(searchString.toLowerCase()) > -1
-      // );
-    } else {
-      return (
-        parsedTags.some((tag) => selectedTags.includes(tag)) &&
-        parsedContent.toLowerCase().indexOf(searchString.toLowerCase()) > -1
-      );
-    }
-  }
-};
-
-const Questions = React.memo(({ questions, selectedTags, searchString }) => {
-  return (
-    <div>
-      {questions.map((question) => {
-        const { parsedContent, parsedTags } = parseContentAndTags(question);
-        if (
-          shouldShowQuestion(
-            parsedContent,
-            parsedTags,
-            selectedTags,
-            searchString
-          )
-        ) {
-          return (
-            <QuestionCard
-              content={parsedContent}
-              key={`${parsedContent}+${parsedTags.join(",")}`}
-              tags={parsedTags}
-            />
-          );
-        }
-        return null;
-      })}
-    </div>
-  );
-});
-
-const QuestionCard = React.memo(({ content, tags }) => {
-  return (
-    <div className="markdown__card">
-      <Divider orientation="right">
-        {tags.map((tag) => (
-          <Tag key={tag} color={tagColor[tag]}>
-            {tag}
-          </Tag>
-        ))}
-      </Divider>
-      <ReactMarkdown
-        source={content}
-        escapeHtml={false}
-        renderers={{ code: CodeBlock }}
-      />
-      <Divider />
-    </div>
-  );
-});
-
-const parseContentAndTags = (content) => {
-  let tags = [];
-  if (content.split("#####").length > 1) {
-    tags = content.split("#####")[1].trim().split(",");
-  }
-  return { parsedTags: tags, parsedContent: content.split("#####")[0] };
-};
