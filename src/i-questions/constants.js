@@ -10,6 +10,8 @@ export const tagColor = {
   Redux: "#764abc",
   Agile: "#02804bc7",
   HTML: "#f06529",
+  UX: "#ff2389",
+  Testing: "#7e00f1d1",
 };
 
 export const tagsData = [
@@ -24,4 +26,6 @@ export const tagsData = [
   "Webpack",
   "Redux",
   "Agile",
+  "UX",
+  "Testing",
 ];

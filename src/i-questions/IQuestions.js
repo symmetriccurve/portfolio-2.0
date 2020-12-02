@@ -29,6 +29,8 @@ export default class iQuestions extends Component {
     scenario: [],
     workFlow: [],
     selectedTags: [],
+    UX: [],
+    testing: [],
     searchString: "",
   };
 
@@ -106,6 +108,8 @@ export default class iQuestions extends Component {
     const scenario = await getResponse(urls.iQuestions.scenarioQuestionsURL);
     const workFlow = await getResponse(urls.iQuestions.workFlowQuestionsURL);
     const html = await getResponse(urls.iQuestions.htmlQuestionsURL);
+    const UX = await getResponse(urls.iQuestions.UXQuestionsURL);
+    const testing = await getResponse(urls.iQuestions.testingQuestionsURL);
     this.setState({
       react,
       css,
@@ -113,6 +117,8 @@ export default class iQuestions extends Component {
       scenario,
       workFlow,
       html,
+      UX,
+      testing,
     });
   }
 
@@ -138,6 +144,8 @@ export default class iQuestions extends Component {
       html,
       css,
       javascript,
+      UX,
+      testing,
       selectedTags,
     } = this.state;
     return (
@@ -262,6 +270,16 @@ export default class iQuestions extends Component {
           />
           <QuestionsList
             questions={html}
+            selectedTags={selectedTags}
+            searchString={searchString}
+          />
+          <QuestionsList
+            questions={UX}
+            selectedTags={selectedTags}
+            searchString={searchString}
+          />
+          <QuestionsList
+            questions={testing}
             selectedTags={selectedTags}
             searchString={searchString}
           />

@@ -7,7 +7,9 @@
     "scenarioQuestionsURL": "https://raw.githubusercontent.com/symmetriccurve/Interview-questions/master/Scenario%20Based%20Questions.md",
     "javascriptQuestionsURL": "https://raw.githubusercontent.com/symmetriccurve/Interview-questions/master/Javascript%20Questions.md",
     "reactNativeQuestionsURL": "https://raw.githubusercontent.com/symmetriccurve/Interview-questions/master/Scenario%20Based%20Questions.md",
-    "htmlQuestionsURL": "https://raw.githubusercontent.com/symmetriccurve/Interview-questions/master/HTML%20Questions.md"
+    "htmlQuestionsURL": "https://raw.githubusercontent.com/symmetriccurve/Interview-questions/master/HTML%20Questions.md",
+    "UXQuestionsURL": "https://raw.githubusercontent.com/symmetriccurve/Interview-questions/master/UX.md",
+    "testingQuestionsURL": "https://raw.githubusercontent.com/symmetriccurve/Interview-questions/master/Testing.md"
   },
   "todayILearned": "https://raw.githubusercontent.com/symmetriccurve/portfolio-2.0/master/src/today-i-learned/today-i-learned.md",
   "blog": "https://api.github.com/repos/symmetriccurve/portfolio-2.0/contents/src/blog/posts",
