@@ -118,7 +118,7 @@ export default class Contact extends Component {
           <div className="contact__info">belvikram@gmail.com</div>
           <div className="contact__header">Or ring me on</div>
           <div className="contact__info">+1-636-707-0526</div>
-          <div className="contact-greeter">{this.renderGreeterBlock()}</div>
+          {/* <div className="contact-greeter">{this.renderGreeterBlock()}</div> */}
         </div>
       </Layout>
     );
