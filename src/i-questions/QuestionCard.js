@@ -5,7 +5,7 @@ import CodeBlock from "../markdownViewer/renderers/codeblocks";
 import { tagColor } from "./constants";
 export const QuestionCard = React.memo(({ content, tags }) => {
   return (
-    <div className="markdown__card">
+    <div className="markdown__card" style={{borderRadius: '10px', border: 'none', marginBottom: '35px'}}>
       <Divider orientation="right">
         {tags.map((tag) => (
           <Tag key={tag} color={tagColor[tag]}>

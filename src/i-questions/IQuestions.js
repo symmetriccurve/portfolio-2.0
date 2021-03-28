@@ -160,7 +160,7 @@ export default class iQuestions extends Component {
                 borderRadius: "25px",
                 alignItems: "center",
                 overflow: "hidden",
-                width: "100%",
+                width: "90%",
               }}
             >
               <div
@@ -210,9 +210,6 @@ export default class iQuestions extends Component {
               flexWrap: "wrap",
             }}
           >
-            {!(selectedTags.length === tagsData.length) && (
-              <span style={{ margin: 8 }}>Add Tags:</span>
-            )}
             {tagsData.map((tag) => {
               const isSelected = selectedTags.indexOf(tag) > -1;
               return (
