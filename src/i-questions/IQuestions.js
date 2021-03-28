@@ -1,13 +1,18 @@
 import React, { Component } from "react";
 import Loader from "react-loaders";
-import { Divider, Tag } from "antd";
-import "loaders.css/src/animations/ball-rotate.scss";
-import { CloseOutlined, PlusOutlined } from "@ant-design/icons";
+import { Divider, Tag, Skeleton } from "antd";
+import ReactGA from "react-ga";
+import {
+  CloseCircleOutlined,
+  CloseOutlined,
+  PlusOutlined,
+} from "@ant-design/icons";
+
 import urls from "../data-layer/urls";
 import Layout from "../layout/Layout";
-import { tagColor, tagsData, subTagsData } from "./constants";
 import { QuestionsList } from "./QuestionList";
-import ReactGA from "react-ga";
+
+import { tagColor, tagsData, subTagsData } from "./constants";
 
 const getResponse = async (url) => {
   return await fetch(url)
@@ -31,7 +36,7 @@ export const SubTagsSelection = ({ subTags, onSelection }) => {
         flexWrap: "wrap",
       }}
     >
-      <div>Popular Searches:</div>
+      <div>Top Searches</div>
       <div>
         {subTags.map((subTag) => {
           return (
@@ -113,6 +118,7 @@ export default class iQuestions extends Component {
   };
 
   async componentDidMount() {
+    this.refs.inputFieldRef.focus()
     // TODO: Cleanup URL param parsing
     ReactGA.initialize("UA-128732492-1", {
       debug: true,
@@ -146,26 +152,32 @@ export default class iQuestions extends Component {
       searchString: searchStringParams,
       selectedTags: tagParams,
     });
+
     const react = await getResponse(urls.iQuestions.reactQuestionsURL);
+    this.setState({ react });
+
     const css = await getResponse(urls.iQuestions.cssQuestionsURL);
+    this.setState({ css });
+
     const javascript = await getResponse(
       urls.iQuestions.javascriptQuestionsURL
     );
+    this.setState({ javascript });
+
     const scenario = await getResponse(urls.iQuestions.scenarioQuestionsURL);
+    this.setState({ scenario });
+
     const workFlow = await getResponse(urls.iQuestions.workFlowQuestionsURL);
+    this.setState({ workFlow });
+
     const html = await getResponse(urls.iQuestions.htmlQuestionsURL);
+    this.setState({ html });
+
     const UX = await getResponse(urls.iQuestions.UXQuestionsURL);
+    this.setState({ UX });
+
     const testing = await getResponse(urls.iQuestions.testingQuestionsURL);
-    this.setState({
-      react,
-      css,
-      javascript,
-      scenario,
-      workFlow,
-      html,
-      UX,
-      testing,
-    });
+    this.setState({ testing });
   }
 
   handleSearch = ({ target: { value: searchString } }) => {
@@ -177,9 +189,13 @@ export default class iQuestions extends Component {
     );
   };
 
-  handleFilter = (e) => {
-    this.setState({});
-  };
+  handleClearSearch = () =>{
+    this.setState({
+      searchString: '',
+      selectedTags: [],
+      subTags: []
+    }, ()=>this.updateURL())
+  }
 
   handleSubTagClick = (subTag) => {
     let subTags = this.state.subTags.filter((each) => each !== subTag);
@@ -216,6 +232,7 @@ export default class iQuestions extends Component {
                 alignItems: "center",
                 overflow: "hidden",
                 width: "90%",
+                border: "0.5px solid #b7b2b2",
               }}
             >
               <div
@@ -251,9 +268,21 @@ export default class iQuestions extends Component {
                 })}
               </div>
               <input
+                ref="inputFieldRef"
                 placeholder="Search"
                 value={searchString}
                 onChange={this.handleSearch}
+              />
+              <CloseCircleOutlined
+                style={{
+                  fontSize: "25px",
+                  color: "#b5b5b5",
+                  display: "flex",
+                  alignItems: "flex-end",
+                  marginRight: "20px",
+                  cursor: "pointer",
+                }}
+                onClick={this.handleClearSearch}
               />
             </div>
           </div>
@@ -276,11 +305,11 @@ export default class iQuestions extends Component {
                 !isSelected && (
                   <Tag
                     key={tag}
-                    closeIcon={
-                      <PlusOutlined
-                        style={{ fontSize: "12px", color: "white" }}
-                      />
-                    }
+                    // closeIcon={
+                    //   <PlusOutlined
+                    //     style={{ fontSize: "12px", color: "white" }}
+                    //   />
+                    // }
                     style={{
                       padding: "5px 10px",
                       borderRadius: "5px",
@@ -290,7 +319,7 @@ export default class iQuestions extends Component {
                       userSelect: "none",
                       margin: "5px",
                     }}
-                    closable
+                    //closable
                     color={tagColor[tag]}
                     onClose={() => this.handleTagClick(tag)}
                     onClick={() => this.handleTagClick(tag)}
@@ -301,15 +330,6 @@ export default class iQuestions extends Component {
               );
             })}
           </div>
-          {(!react.length ||
-            !css.length ||
-            !javascript.length ||
-            !scenario.length ||
-            !workFlow.length) && (
-            <div>
-              <Loader className="markdown__loader" type="ball-rotate" />
-            </div>
-          )}
           <QuestionsList
             questions={react}
             selectedTags={selectedTags}

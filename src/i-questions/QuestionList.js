@@ -1,3 +1,4 @@
+import { Skeleton } from "antd";
 import React from "react";
 import { QuestionCard } from "./QuestionCard";
 import { parseContentAndTags } from "./utils/contentParser";
@@ -30,6 +31,10 @@ const shouldShowQuestion = (
 
 export const QuestionsList = React.memo(
   ({ questions, selectedTags, searchString }) => {
+
+    if(!questions.length){
+      return <Skeleton className="markdown__card" style={{borderRadius: '10px', border: 'none', marginBottom: '35px'}} />
+    }
     return (
       <div>
         {questions.map((question) => {

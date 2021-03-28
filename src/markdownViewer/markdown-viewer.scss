@@ -44,6 +44,7 @@
     align-items: center;
     justify-content: center;
     height: 90vh;
+    color: black;
   }
 
   &__search-bar {
@@ -55,7 +56,8 @@
 
     input {
       height: 50px;
-      width: 47%;
+      // width: 83%;
+      flex: 1;
       text-decoration: none;
       //border-radius: 25px;
       font-family: $primary-font;
