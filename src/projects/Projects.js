@@ -30,9 +30,9 @@ export default class Blog extends Component {
 						<input className="blog__search-bar__input" placeholder="Search"/>
 					</div> */}
           <div className="projects__header">
-            <NavLink to="/pet-projects">
-              <Button label={"Other Interests"} onClick={() => {}} />
-            </NavLink>
+            {/* <NavLink to="/pet-projects">
+              <Button label="Other Interests" onClick={() => {}} />
+            </NavLink> */}
             <div className="header__resume">
               <a href="https://docs.google.com/document/d/1rQUigIKVexwfT-YBXisBr0cjIh50uHNSaKS2MZ1LC00/export?format=pdf">
                 <Button label={"Download Resume"} onClick={() => {}} />

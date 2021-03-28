@@ -49,9 +49,9 @@ export default class LaunchPage extends Component
 					{/* <span className='launch-page__link--seperator'>|</span> */}
 					{/* <a href='https://itunes.apple.com/us/developer/vikram-belde/id1164307305' className='launch-page__link'>Apps</a> */}
 					{/* <span className='launch-page__link--seperator'>|</span> */}
-					<a href='https://www.linkedin.com/in/vikrambelde/' className='launch-page__link'>LinkedIn</a>
+					<a href='https://www.linkedin.com/in/vikrambelde/' target="_blank" className='launch-page__link'>LinkedIn</a>
 					{/* <span className='launch-page__link--seperator'>|</span> */}
-					<a href='https://github.com/symmetriccurve' className='launch-page__link'>Code</a>
+					<a href='https://github.com/symmetriccurve' target="_blank" className='launch-page__link'>Code</a>
 					{/* <span className='launch-page__link--seperator'>|</span> */}
 					<Link to='/my-interview'>
 						<span className='launch-page__link'>My interview</span>
