@@ -12,6 +12,6 @@
     "testingQuestionsURL": "https://raw.githubusercontent.com/symmetriccurve/Interview-questions/master/Testing.md"
   },
   "todayILearned": "https://raw.githubusercontent.com/symmetriccurve/portfolio-2.0/master/src/today-i-learned/today-i-learned.md",
-  "blog": "https://api.github.com/repos/symmetriccurve/portfolio-2.0/contents/src/blog/posts",
+  "blog": "https://raw.githubusercontent.com/symmetriccurve/portfolio-2.0/master/src/blog/posts/index.json",
   "myInterview": "https://raw.githubusercontent.com/symmetriccurve/portfolio-2.0/master/src/myInterview/my-interview.md"
 }

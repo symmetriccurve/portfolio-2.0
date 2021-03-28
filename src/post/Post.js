@@ -6,20 +6,17 @@ import CodeBlock from "../markdownViewer/renderers/codeblocks";
 import Layout from "../layout/Layout";
 import urls from "../data-layer/urls";
 import { Skeleton } from "antd";
-import post from "./posts/1-Interview Questions.md";
+// import post from "./posts/1-Interview Questions.md";
 import { Card, Avatar, Row, Col, Divider } from "antd";
 import { ReadFilled, SettingFilled } from "@ant-design/icons";
-import posts from './posts/index.json'
-import { Link } from "react-router-dom";
 const { Meta } = Card;
 export default class Blog extends Component {
   state = {
-    posts//: [],
+    posts: []
   };
 
   componentDidMount() {
-    // fetch("https://raw.githubusercontent.com/symmetriccurve/portfolio-2.0/master/src/blog/posts/index.json")
-
+    //fetch("https://raw.githubusercontent.com/symmetriccurve/portfolio-2.0/master/src/blog/posts/index.json")
     // fetch(urls.blog)
     //   .then((res) => res.json())
     //   .then((posts) => {
@@ -65,20 +62,18 @@ export default class Blog extends Component {
           <Row style={{display: 'flex', justifyContent: 'center'}}>
             {posts.map((each) => {
               return (
-                <Link to={`/post&postId=${each.id}`} params={{ postId: each.id }} key={each.id}>
-                  <Col style={{margin:'15px'}}>
-                    <Card
-                      hoverable
-                      style={{ width: 300 }}
-                      cover={<img alt="post-image" src={each.imageSrc} />}
-                    >
-                      <Meta
-                        title={each.title}
-                        description={each.subTitle}
-                      />
-                    </Card>
-                  </Col>
-                </Link>
+                <Col style={{margin:'15px'}}>
+                  <Card
+                    hoverable
+                    style={{ width: 300 }}
+                    cover={<img alt="post-image" src={each.imageSrc} />}
+                  >
+                    <Meta
+                      title={each.title}
+                      description={each.subTitle}
+                    />
+                  </Card>
+                </Col>
               );
             })}
           </Row>

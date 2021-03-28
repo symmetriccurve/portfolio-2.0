@@ -12,6 +12,7 @@ import Training from './training/Training'
 import PetProjects from './pet-projects/PetProjects'
 import IQuestions from './i-questions/IQuestions'
 import Register from './register/Register'
+import Post from './post/Post'
 
 import {
     HashRouter,
@@ -25,6 +26,7 @@ export default ()=>{
 			<div>
 				<Route exact path="/" component={ LaunchPage }/>
 				<Route exact path="/blog" component={ Blog }/>
+				<Route exact path="/post&postId=:postId" component={ Post }/>
 				<Route exact path="/projects" component={ Projects }/>
 				<Route exact path="/contact" component={ Contact }/>
 				<Route exact path="/my-interview" component={ MyInterview }/>
