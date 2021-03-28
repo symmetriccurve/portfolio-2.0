@@ -13,13 +13,13 @@ import
 
 export default class LaunchPage extends Component
 {
-	componentDidMount()
-	{
-		particlesJS.load('particles-js', '/particlesjs-config.json', function ()
-		{
-			//console.log('callback - particles.js config loaded');
-		});
-	}
+	// componentDidMount()
+	// {
+	// 	particlesJS.load('particles-js', '/particlesjs-config.json', function ()
+	// 	{
+	// 		//console.log('callback - particles.js config loaded');
+	// 	});
+	// }
 	render()
 	{
 		return (
