@@ -31,3 +31,26 @@ export const tagsData = [
   "UX",
   "Testing",
 ];
+
+export const subTagsData = {
+  "Frequently Asked": ["Component Life Cycle", "Redux Flow"],
+  ReactJs: [
+    "useContext",
+    "Life Cycle",
+    "Hooks",
+    "controlled vs uncontrolled component",
+    "JSX syntax",
+    "VDOM in React",
+  ],
+  "React Native": ["iOS", "Android"],
+  Testing: ["Enzyme", "React Testing Library"],
+  Redux: ["saga", "redux flow", "middleware"],
+  CSS: ["Advantages of Sass"],
+  Javascript: [
+    "closure",
+    "Arrow functions",
+    "spread operator",
+    "let vs const",
+    "ES6 features",
+  ],
+};

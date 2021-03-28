@@ -8,7 +8,7 @@ const shouldShowQuestion = (
   selectedTags,
   searchString
 ) => {
-  if (searchString === "") {
+  if (!searchString) {
     if (selectedTags.length === 0) {
       return true;
     } else {
@@ -18,11 +18,7 @@ const shouldShowQuestion = (
     }
   } else {
     if (selectedTags.length === 0) {
-      return selectedTags.every((val) => parsedTags.includes(val));
-      // Below line will make the tags work as in OR condition while above line works and AND
-      // return (
-      //   parsedContent.toLowerCase().indexOf(searchString.toLowerCase()) > -1
-      // );
+      return parsedContent.toLowerCase().indexOf(searchString.toLowerCase()) > -1
     } else {
       return (
         parsedTags.some((tag) => selectedTags.includes(tag)) &&

@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import Loader from "react-loaders";
-import { Tag } from "antd";
+import { Divider, Tag } from "antd";
 import "loaders.css/src/animations/ball-rotate.scss";
 import { CloseOutlined, PlusOutlined } from "@ant-design/icons";
 import urls from "../data-layer/urls";
 import Layout from "../layout/Layout";
-import { tagColor, tagsData } from "./constants";
+import { tagColor, tagsData, subTagsData } from "./constants";
 import { QuestionsList } from "./QuestionList";
 import ReactGA from "react-ga";
 
@@ -19,6 +19,46 @@ const getResponse = async (url) => {
     });
 };
 
+export const SubTagsSelection = ({ subTags, onSelection }) => {
+  if (!subTags.length) return null;
+
+  return (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexWrap: "wrap",
+      }}
+    >
+      <div>Popular Searches:</div>
+      <div>
+        {subTags.map((subTag) => {
+          return (
+            <Tag
+              key={subTag}
+              closeIcon={
+                <PlusOutlined style={{ fontSize: "12px", color: "white" }} />
+              }
+              style={{
+                padding: "5px 10px",
+                borderRadius: "5px",
+                cursor: "pointer",
+                fontWeight: "bold",
+                color: "black",
+                userSelect: "none",
+                margin: "5px",
+              }}
+              onClick={() => onSelection(subTag)}
+            >
+              {subTag}
+            </Tag>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
 export default class iQuestions extends Component {
   state = {
     react: [],
@@ -29,6 +69,8 @@ export default class iQuestions extends Component {
     scenario: [],
     workFlow: [],
     selectedTags: [],
+    subTags: [],
+    selectedSubTags: [],
     UX: [],
     testing: [],
     searchString: "",
@@ -41,14 +83,18 @@ export default class iQuestions extends Component {
       label: tag,
     });
     let selectedTags = [...this.state.selectedTags];
+    let subTags = [];
     if (selectedTags.indexOf(tag) > -1) {
       selectedTags = selectedTags.filter((item) => item !== tag);
+      subTags = [];
     } else {
       selectedTags = [...selectedTags, tag];
+      subTags = subTagsData[tag] || [];
     }
     this.setState(
       {
         selectedTags,
+        subTags,
       },
       () => this.updateURL()
     );
@@ -135,6 +181,14 @@ export default class iQuestions extends Component {
     this.setState({});
   };
 
+  handleSubTagClick = (subTag) => {
+    let subTags = this.state.subTags.filter((each) => each !== subTag);
+    this.setState({
+      searchString: `${this.state.searchString} ${subTag}`,
+      subTags,
+    });
+  };
+
   render() {
     const {
       searchString,
@@ -147,6 +201,7 @@ export default class iQuestions extends Component {
       UX,
       testing,
       selectedTags,
+      subTags,
     } = this.state;
     return (
       <Layout>
@@ -202,6 +257,11 @@ export default class iQuestions extends Component {
               />
             </div>
           </div>
+          <SubTagsSelection
+            subTags={subTags}
+            onSelection={this.handleSubTagClick}
+          />
+          <Divider />
           <div
             style={{
               display: "flex",
