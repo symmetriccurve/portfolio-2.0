@@ -1,0 +1,23 @@
+{
+  "Frequently Asked": ["Component Life Cycle", "Redux Flow"],
+  "ReactJs": [
+    "Life Cycle",
+    "class vs functional",
+    "controlled vs uncontrolled component",
+    "useContext",
+    "Hooks",
+    "JSX syntax",
+    "VDOM in React"
+  ],
+  "React Native": ["iOS", "Android"],
+  "Testing": ["Enzyme", "React Testing Library"],
+  "Redux": ["saga", "redux flow", "middleware"],
+  "CSS": ["Advantages of Sass"],
+  "Javascript": [
+    "closure",
+    "Arrow functions",
+    "spread operator",
+    "let vs const",
+    "ES6 features"
+  ]
+}
