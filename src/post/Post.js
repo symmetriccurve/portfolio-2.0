@@ -4,9 +4,11 @@ import CodeBlock from "../markdownViewer/renderers/codeblocks";
 import Layout from "../layout/Layout";
 import urls from "../data-layer/urls";
 import { Skeleton } from "antd";
+import localPosts from '../blog/posts/index.json'
+
 export default class Blog extends Component {
   state = {
-    posts: null,
+    post: null,
   };
 
   componentDidMount() {
@@ -14,7 +16,8 @@ export default class Blog extends Component {
     fetch(urls.blog)
       .then((res) => res.json())
       .then((posts) => {
-        const [requestedPost] = posts.filter(
+
+        const [requestedPost] = (process.env.NODE_ENV !== 'production' ? localPosts : posts).filter(
           (post) => post.id == requestsPostId
         );
         fetch(requestedPost.link)
@@ -37,6 +40,7 @@ export default class Blog extends Component {
     const { post } = this.state;
     return (
       <Layout>
+        <div className="markdown" style={{margin: '50px', backgroundColor:"white"}}>
         {post ? (
           <ReactMarkdown
             source={post}
@@ -46,6 +50,7 @@ export default class Blog extends Component {
         ) : (
           <Skeleton />
         )}
+        </div>
       </Layout>
     );
   }
