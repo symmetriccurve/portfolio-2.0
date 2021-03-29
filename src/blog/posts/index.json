@@ -3,56 +3,21 @@
     "title": "2021 Interview Questions",
     "subTitle": "Catalog of 200+ interview questions with explanations and smart filtering",
     "imageSrc": "https://res.cloudinary.com/practicaldev/image/fetch/s--54ca_F2q--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/1wwdyw5de8avrdkgtz5n.png",
-    "link": "https://raw.githubusercontent.com/symmetriccurve/portfolio-2.0/master/src/blog/posts/5-%20why-css-is-hard.md",
+    "link": "https://github.com/symmetriccurve/portfolio-2.0/raw/master/src/blog/posts/1-Interview%20Questions.md",
     "id": 1
   },
   {
-    "title": "2021 Interview Questions with Explanations",
-    "subTitle": "Catalog of 200+ interview questions with explanations and smart filtering",
-    "imageSrc": "https://res.cloudinary.com/practicaldev/image/fetch/s--54ca_F2q--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/1wwdyw5de8avrdkgtz5n.png",
-    "link": "https://raw.githubusercontent.com/symmetriccurve/portfolio-2.0/master/src/blog/posts/5-%20why-css-is-hard.md",
+    "title": "Unit testing",
+    "subTitle": "What unit testing frameworks do to react components",
+    "imageSrc": "https://www.danylkoweb.com/content/images/UnitTesting-hammer.jpg",
+    "link": "https://raw.githubusercontent.com/symmetriccurve/portfolio-2.0/master/src/blog/posts/2%20-Getting-Started-with-React-Unit-Testing.md",
     "id": 2
   },
   {
-    "title": "2021 Interview Questions",
-    "subTitle": "Catalog of 200+ interview questions with explanations and smart filtering",
-    "imageSrc": "https://res.cloudinary.com/practicaldev/image/fetch/s--54ca_F2q--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/1wwdyw5de8avrdkgtz5n.png",
-    "link": "https://raw.githubusercontent.com/symmetriccurve/portfolio-2.0/master/src/blog/posts/5-%20why-css-is-hard.md",
+    "title": "Jenkins in Action",
+    "subTitle": "Continuous integration and continuos deployments",
+    "imageSrc": "https://www.zend.com/sites/zend/files/image/2019-09/logo-jenkins.jpg",
+    "link": "https://github.com/symmetriccurve/portfolio-2.0/raw/master/src/blog/posts/3-Jenkins%20in%20action.md",
     "id": 3
-  },
-  {
-    "title": "2021 Interview Questions with Explanations",
-    "subTitle": "Catalog of 200+ interview questions with explanations and smart filtering",
-    "imageSrc": "https://res.cloudinary.com/practicaldev/image/fetch/s--54ca_F2q--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/1wwdyw5de8avrdkgtz5n.png",
-    "link": "https://raw.githubusercontent.com/symmetriccurve/portfolio-2.0/master/src/blog/posts/5-%20why-css-is-hard.md",
-    "id": 4
-  },
-  {
-    "title": "2021 Interview Questions",
-    "subTitle": "Catalog of 200+ interview questions with explanations and smart filtering",
-    "imageSrc": "https://res.cloudinary.com/practicaldev/image/fetch/s--54ca_F2q--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/1wwdyw5de8avrdkgtz5n.png",
-    "link": "https://raw.githubusercontent.com/symmetriccurve/portfolio-2.0/master/src/blog/posts/5-%20why-css-is-hard.md",
-    "id": 5
-  },
-  {
-    "title": "2021 Interview Questions with Explanations",
-    "subTitle": "Catalog of 200+ interview questions with explanations and smart filtering",
-    "imageSrc": "https://res.cloudinary.com/practicaldev/image/fetch/s--54ca_F2q--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/1wwdyw5de8avrdkgtz5n.png",
-    "link": "https://raw.githubusercontent.com/symmetriccurve/portfolio-2.0/master/src/blog/posts/5-%20why-css-is-hard.md",
-    "id": 6
-  },
-  {
-    "title": "2021 Interview Questions",
-    "subTitle": "Catalog of 200+ interview questions with explanations and smart filtering",
-    "imageSrc": "https://res.cloudinary.com/practicaldev/image/fetch/s--54ca_F2q--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/1wwdyw5de8avrdkgtz5n.png",
-    "link": "https://raw.githubusercontent.com/symmetriccurve/portfolio-2.0/master/src/blog/posts/5-%20why-css-is-hard.md",
-    "id": 7
-  },
-  {
-    "title": "2021 Interview Questions with Explanations",
-    "subTitle": "Catalog of 200+ interview questions with explanations and smart filtering",
-    "imageSrc": "https://res.cloudinary.com/practicaldev/image/fetch/s--54ca_F2q--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/1wwdyw5de8avrdkgtz5n.png",
-    "link": "https://raw.githubusercontent.com/symmetriccurve/portfolio-2.0/master/src/blog/posts/5-%20why-css-is-hard.md",
-    "id": 8
   }
 ]

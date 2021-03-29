@@ -3,6 +3,7 @@ import Layout from "../layout/Layout";
 import urls from "../data-layer/urls";
 import { Card, Avatar, Row, Col, Divider } from "antd";
 import { Link } from "react-router-dom";
+import localPosts from '../blog/posts/index.json'
 const { Meta } = Card;
 export default class Blog extends Component {
   state = {
@@ -14,7 +15,7 @@ export default class Blog extends Component {
       .then((res) => res.json())
       .then((posts) => {
         this.setState({
-          posts,
+          posts: process.env.NODE_ENV !== 'production' ? localPosts : posts 
         });
       })
       .catch((err) => {
@@ -63,7 +64,7 @@ export default class Blog extends Component {
                     <Card
                       hoverable
                       style={{ width: 300 }}
-                      cover={<img alt="post-image" src={each.imageSrc} />}
+                      cover={<img alt="post-image" src={each.imageSrc} style={{maxWidth:'300px'}}/>}
                     >
                       <Meta title={each.title} description={each.subTitle} />
                     </Card>
