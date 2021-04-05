@@ -1,6 +1,6 @@
 //{/*eslint-disable */}
 import React, { Component } from 'react';
-import ReCAPTCHA from 'react-google-recaptcha';
+// import ReCAPTCHA from 'react-google-recaptcha';
 import Layout from '../layout/Layout';
 const emailURL = 'https://script.google.com/macros/s/AKfycbyCnHfXJPBCQm17nGdtLa0immNulKNNJHzwWvyNhRg2bdIPmaU/exec'
 
@@ -80,10 +80,10 @@ export default class Contact extends Component {
 					<input value={ contactDetail } name="contactDetail" onChange={ (event)=>this.handleChange(event) } className="greeter__input--email" placeholder="Email/Phone"/>
 				</div>
 				<div className="greeter__captcha">
-					<ReCAPTCHA
+					{/* <ReCAPTCHA
 					sitekey="6Ldu7XYUAAAAADj7U1LjSG8cJ5oHIe6dIWIQEhKK"
 					onChange={ (value)=>this.onChange(value) }
-				/>
+				/> */}
 				</div>
 				{
 					this.validateFields() ?

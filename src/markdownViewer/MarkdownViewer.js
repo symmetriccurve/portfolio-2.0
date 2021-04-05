@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from './renderers/codeblocks';
-import Loader from 'react-loaders';
-import 'loaders.css/src/animations/ball-rotate.scss';
+// import Loader from 'react-loaders';
+// import 'loaders.css/src/animations/ball-rotate.scss';
 export default class MarkDownViewer extends Component {
 
 	state = {
@@ -68,7 +68,8 @@ export default class MarkDownViewer extends Component {
 				{
 					!markDown.length && 
 					<div>
-						<Loader className='markdown__loader' type="ball-rotate" />
+						{/* <Loader className='markdown__loader' type="ball-rotate" /> */}
+						Loading...
 					</div>	
 				}
 				{

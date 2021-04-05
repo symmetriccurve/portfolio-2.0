@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Loader from "react-loaders";
 import { Divider, Tag, Skeleton } from "antd";
 import ReactGA from "react-ga";
 import {

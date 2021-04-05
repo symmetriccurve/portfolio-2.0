@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import ReactMarkdown from 'react-markdown'
 import CodeBlock from '../markdownViewer/renderers/codeblocks'
 import Layout from '../layout/Layout'
-import Loader from 'react-loaders'
-import 'loaders.css/src/animations/ball-rotate.scss'
+// import Loader from 'react-loaders'
+// import 'loaders.css/src/animations/ball-rotate.scss'
 import urls from '../data-layer/urls'
 export default class MyInterview extends Component {
 
@@ -34,7 +34,8 @@ export default class MyInterview extends Component {
 					{
 						!markdown &&
 						<div>
-							<Loader className='markdown__loader' type='ball-rotate' />
+							{/* <Loader className='markdown__loader' type='ball-rotate' /> */}
+							Loading...
 						</div>
 					}
 					<ReactMarkdown

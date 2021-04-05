@@ -1,7 +1,6 @@
 import React from 'react';
 import LaunchPage from './launchPage/LaunchPage';
 import Blog from './blog/Blog'
-import Editor from './editor/Editor'
 import Contact from './contact/Contact'
 import Projects from './projects/Projects'
 import MyInterview from './myInterview/MyInterview'
@@ -36,7 +35,6 @@ export default ()=>{
 				<Route exact path="/Training" component={ Training }/>
 				<Route exact path="/interviewQuestions" component={ IQuestions }/>
 				<Route exact path="/pet-projects" component={ PetProjects }/>
-				<Route exact path="/editor" component={ Editor }/>
 				<Route exact path="/register" component={ Register }/>
 			</div>
 		</HashRouter>
