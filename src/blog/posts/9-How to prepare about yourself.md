@@ -20,7 +20,7 @@ _Relevant Experience matters._
 
 ## Example 1: 
 
-My full name is Johnathan Jackson.I have 7 Year of experience working as a frontend developer. My areas of expertise are react on the front end and spring boot on the back end. I started my career back in india as HTMl, CSS and Javascript developer at ABC systems, where i was building there public facing website then i got an opportunity to do masters in the us from YUZ university.then i started working from bank XYZ as a frontend developer where i learned about react and security around the web technologies then i moved on to UPS where i was working on data intensive front end applications using react and redux as a state management library and I have used enzyme for unit testing and webpack for building and bundling the application.
+My full name is Johnathan Jackson.I have 7 Year of experience working as a frontend developer. My areas of expertise are react on the front end and java on the back end. I started my career back in india as HTMl, CSS and Javascript developer at ABC systems, where i was building there public facing website then i got an opportunity to do masters in the us from YUZ university.then i started working from bank XYZ as a frontend developer where i learned about react and security around the web technologies then i moved on to UPS where i was working on data intensive front end applications using react and redux as a state management library and I have used enzyme for unit testing and webpack for building and bundling the application.
 
 I am currently working with Verizon in building a Permission based dashboard portal for store representatives across the verizon facilities to manage permission of the associates on the customer data, the application is built from the scratch using React and Redux, I architected the project from the base level and introduced many features and enhancements. 
 
@@ -31,9 +31,9 @@ My day to day responsibilities include code reviews, code merges, deployments, m
 ## Example 2: 
 
 
-My full name is Julie Smith. I have seven years of experience working as a front end engineer, and five years of experience working as a reactor developer. I started my career with PNC In Pittsburgh, this was my first project with React, where I learned a lot about the React ecosystem, and was able to deliver the project, integrated with flux state management library back in 2015, 2016. 
+My full name is Julie Smith. I have seven years of experience working as a front end engineer, and five years of experience working as a React developer. I started my career with PNC In Pittsburgh, this was my first project with React, where I learned a lot about the React ecosystem, and was able to deliver the project, integrated with flux state management library back in 2015 and 2016. 
 
-Then I got an opportunity to work with South Carolina Department of Health and financial services, and this was a completely remote job where I have created advanced react components using both functional and class based. And then I also work with higher order components to share business logic. I also extensively contributed to unit testing using react-testing-library and achieved up to 85% of the code coverage across all the functions, branches, lines etc. 
+Then I got an opportunity to work with South Carolina Department of Health and financial services, where I have created advanced react components using both functional and class based. And then I also work with higher order components to share business logic. I also extensively contributed to unit testing using react-testing-library and achieved up to 85% of the code coverage across all the functions, branches, lines etc. 
 
 I also contributed into Redux middlewares like redux sagas and redux thunks and I architected and designed the reducers from the scratch and had them in Nexus server, where they can be shared across multiple applications using npm packages I mean node modules. 
 
