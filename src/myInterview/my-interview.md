@@ -1,38 +1,43 @@
 ### Tell me about yourself ?
-I am a Developer, Designer, Engineer and Mentoring. I enjoy developing UI for web and mobile. I love mentoring and helping beginners to get started on web development. Along side development, I love designing and prototyping. I own a 3d printer and I absolutely love it. 
+
+I ❤️ Designing, Developing , Engineering, wood working, prototyping, and hours of 3D printing and mentoring.
 
 ---
 
 ### What do you enjoy the most web development or mobile app development ?
+
 I enjoy coding for web and designing for mobile.
 
 ---
 
-### What do you kill time ?
-Flying Drones, prototyping, 3d printing and making react tutorials. 
+### What is your most favorite way of spending time away from work ?
+
+Flying Drones, prototyping, 3d printing and making react tutorials.
 
 ---
 
-### What is that you build that you are most proud of ?
-I made a [mine-sweeper](https://github.com/symmetriccurve/minesweeper-with-react)💣 from the scratch using reactjs ⚛.
+### Show me something you build that you are really proud of ?
 
-Few other things, 
-- I coded a python script that scans through the directory structure of react project and adds unit test boilerplate template.
-- My portfolio
+I developed a one stop solution/platform[Linterviews](https://www.linterviews.com) for job seekers to manage interviews and drafted close to 400 [interview questions](https://www.belvikram.com/#/interviewQuestions) across muliple frontend interviews
+
+I coded a [mine-sweeper](https://github.com/symmetriccurve/minesweeper-with-react)💣 from ground up using reactjs ⚛.
 
 ---
 
-### What do you like to build in day to day job ?
-I like building developer tools which can help developers to build more better things, so I like to build things that helps to build. 
+### What would be our ideal job responsibilities ?
+
+I like building developer tools which can help developers to build more better things, so I like to build things that helps to build.
 
 ---
 
 ### What is a fun fact about you ?
+
 I can match a 3X3 Rubix cube in less than 3 minutes
 
 ---
 
 ### How do you keep up with the technologies ?
+
 I think there is no other industry that is changing as rapidly as software development😭. I set aside at-least 30 minutes 🕔 🕠 of my time to keep up to date with the technologies.
 I avidly follow 🐶hacker news for all my tech updates, each news link takes to different websites.
 
@@ -51,6 +56,7 @@ For a new developer🐣 who is reading through this code, he has no clue about t
 if( cartTotal > MINIMUM_ORDER_TO_SHIP) 👍 makes the easier to read and maintain🎉, if the company decides to make changes to minimum order, I don't have to dig⚓️ through the files to find this if condition to alter the minimum order to ship, rather I would look for constants file and make the changes accordingly.
 
 Few other things I look for are
+
 - Indentation
 - Naming conventions
 - Code comments if the block of code has any edge case(Example: like if a coupon is applied, then no minium order is required)
