@@ -1,42 +1,44 @@
 /* Interesting Read: 
 https://stackoverflow.com/questions/34550467/why-is-there-a-default-margin-on-the-body-element/34550634 */
 
-html,body{
-    margin: 0;
-    padding: 0;
-    font-family: $primary-font;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $primary-font;
 }
 
 a {
-    font-family: $logo-font;
-    color: white;
-    text-decoration: none;
+  font-family: $logo-font;
+  color: white;
+  text-decoration: none;
 }
 
-.bold{
-    font-weight: bold;
+a:hover {
+  color: gray !important;
 }
 
+.bold {
+  font-weight: bold;
+}
 
-@import '../../launchPage/launch-page.scss';
-@import '../../layout/layout.scss';
-@import '../../header/header.scss';
-@import '../../blog/blog.scss';
-@import '../../contact/contact.scss';
-@import '../../projects/projects.scss';
-@import '../../myInterview/my-interview.scss';
+@import "../../launchPage/launch-page.scss";
+@import "../../layout/layout.scss";
+@import "../../header/header.scss";
+@import "../../blog/blog.scss";
+@import "../../contact/contact.scss";
+@import "../../projects/projects.scss";
+@import "../../myInterview/my-interview.scss";
 
-@import '../../as-a-teacher/as-a-teacher.scss';
-@import '../../as-a-engineer/as-a-engineer.scss';
-@import '../../today-i-learned/today-i-learned.scss';
-@import '../../training/training.scss';
-@import '../../editor/editor.scss';
-@import '../../markdownViewer/markdown-viewer.scss';
+@import "../../as-a-teacher/as-a-teacher.scss";
+@import "../../as-a-engineer/as-a-engineer.scss";
+@import "../../today-i-learned/today-i-learned.scss";
+@import "../../training/training.scss";
+@import "../../editor/editor.scss";
+@import "../../markdownViewer/markdown-viewer.scss";
 
+@import "../../footer/footer.scss";
 
-@import '../../footer/footer.scss';
+@import "../../components/lazy-card/lazy-card.scss";
 
-
-@import '../../components/lazy-card/lazy-card.scss';
-
-@import './common.scss'
+@import "./common.scss";

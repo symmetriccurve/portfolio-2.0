@@ -1,71 +1,71 @@
 .header {
-    background-color: $primary-color;
-    padding: 15px 0px;
+  background-color: $primary-color;
+  padding: 15px 0px;
+  display: flex;
+  box-shadow: -1px 2px 7px -2px rgb(87, 87, 87);
+
+  &__left {
+    align-items: center;
+    justify-content: center;
     display: flex;
-    box-shadow: -1px 2px 7px -2px rgb(87, 87, 87); 
 
-    &__left{ 
-      align-items: center;
-      justify-content: center;
-      display: flex;
-
-      @include mobile{
-        flex: 1;
-      }
-
-    }
-
-    &__right{
+    @include mobile {
       flex: 1;
-      align-items: center;
+    }
+  }
+
+  &__right {
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  @include mobile {
+    padding: 20px 0px;
+    flex-direction: column;
+  }
+
+  &__logo {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+
+    @include mobile {
+      margin: 10px 0px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex: 1;
+    margin-right: 20px;
+    align-items: center;
+    justify-content: flex-end;
+
+    @include mobile {
       justify-content: center;
-      display: flex;
+      margin-right: 0px;
     }
-
-    @include mobile{
-      padding: 20px 0px;
-      flex-direction: column;
-    }
-
-    &__logo {
-      margin-left: 20px;
-      display: flex;
-      flex-direction: row;
-
-      @include mobile{
-        margin: 10px 0px;
-      }
-
-    }
-
-    &__links{
-      display: flex;
-      flex: 1;
-      margin-right: 20px;
-      align-items: center;
-      justify-content: flex-end;
-
-      @include mobile{
-        justify-content: center;
-        margin-right: 0px;
-      }
-
-
-    }
+  }
 }
 
-.links__link{
+.links__link {
   font-family: $logo-font;
   color: white;
   justify-content: flex-end;
   cursor: pointer;
 
-  &--active{
-    color:lighten(grey,5%);
+  a:hover {
+    color: white;
+  }
+
+  &--active {
+    color: lighten(grey, 5%);
     cursor: auto;
   }
 
-  &--seperator{
+  &--seperator {
     font-weight: 100;
     margin: 0px 5px;
     font-family: $logo-font;
@@ -75,44 +75,44 @@
   }
 }
 
-.logo__name{
+.links__link :hover {
+  color: white !important;
+}
+
+.logo__name {
   font-size: 2vw;
   color: white;
   font-family: $logo-font;
 
-  @include desktop{
+  @include desktop {
     font-size: 2vw;
   }
 
-  @include tablet{
+  @include tablet {
     font-size: 4vw;
   }
 
-  @include mobile{
+  @include mobile {
     font-size: 6vw;
   }
 
-
-  &--last{
+  &--last {
     color: transparent;
     font-size: 2vw;
     font-family: $logo-font;
     -webkit-text-stroke-width: 0.8px;
     -webkit-text-stroke-color: rgb(255, 255, 255);
 
-    @include desktop{
+    @include desktop {
       font-size: 2vw;
     }
-  
-    @include tablet{
+
+    @include tablet {
       font-size: 4vw;
     }
-  
-    @include mobile{
+
+    @include mobile {
       font-size: 6vw;
     }
-
   }
-
 }
-  
