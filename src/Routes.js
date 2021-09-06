@@ -38,11 +38,10 @@ export default () => {
           <Route
             exact
             path="/join"
-            component={() => {
-              window.location.href =
-                "https://us02web.zoom.us/j/8367625137?pwd=cVcyWmk1QkVsTmhVNDZRRkRNcy9zdz09";
-              return null;
-            }}
+            render={() =>
+              (window.location =
+                "https://us02web.zoom.us/s/8367625137?pwd=cVcyWmk1QkVsTmhVNDZRRkRNcy9zdz09")
+            }
           />
         </div>
       </HashRouter>
