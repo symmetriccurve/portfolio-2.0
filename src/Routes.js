@@ -16,7 +16,7 @@ import Post from "./post/Post";
 
 import { HashRouter, Route } from "react-router-dom";
 
-export default () => {
+const Routes = () => {
   return (
     <div>
       <HashRouter>
@@ -40,7 +40,7 @@ export default () => {
             path="/join"
             render={() =>
               (window.location =
-                "https://us02web.zoom.us/s/8367625137?pwd=cVcyWmk1QkVsTmhVNDZRRkRNcy9zdz09")
+                "https://us02web.zoom.us/j/8367625137?pwd=cVcyWmk1QkVsTmhVNDZRRkRNcy9zdz09#success")
             }
           />
         </div>
@@ -48,3 +48,5 @@ export default () => {
     </div>
   );
 };
+
+export default Routes;
