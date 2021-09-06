@@ -6,16 +6,16 @@ export default class LaunchPage extends Component {
     return (
       <div className="launch-page" id="particles-js">
         <div className="launch-page__name">
+          <span className="name__letter--lname">B</span>
+          <span className="name__letter--lname">e</span>
+          <span className="name__letter--lname">l</span>
+          &nbsp;&nbsp;
           <span className="name__letter">V</span>
           <span className="name__letter">i</span>
           <span className="name__letter">k</span>
           <span className="name__letter">r</span>
           <span className="name__letter">a</span>
           <span className="name__letter">m</span>
-          &nbsp;&nbsp;
-          <span className="name__letter--lname">B</span>
-          <span className="name__letter--lname">e</span>
-          <span className="name__letter--lname">l</span>
           {/* <span className='name lName'>d</span> 
               <span className='name lName'>e</span>   */}
         </div>
@@ -23,6 +23,14 @@ export default class LaunchPage extends Component {
           <Link to="/blog">
             <span className="launch-page__link">Blog</span>
           </Link>
+          <a
+            href="https://github.com/symmetriccurve"
+            target="_blank"
+            className="launch-page__link"
+            rel="noreferrer"
+          >
+            Code
+          </a>
           {/* <span className='launch-page__link--seperator'>|</span> */}
           <Link to="/projects">
             <span className="launch-page__link">Projects</span>
@@ -38,18 +46,18 @@ export default class LaunchPage extends Component {
           >
             LinkedIn
           </a>
-          {/* <span className='launch-page__link--seperator'>|</span> */}
           <a
-            href="https://github.com/symmetriccurve"
+            href="https://www.youtube.com/user/buzzvikram/playlists"
             target="_blank"
             className="launch-page__link"
             rel="noreferrer"
           >
-            Code
+            Tutorials
           </a>
           {/* <span className='launch-page__link--seperator'>|</span> */}
+          {/* <span className='launch-page__link--seperator'>|</span> */}
           <Link to="/my-interview">
-            <span className="launch-page__link">My interview</span>
+            <span className="launch-page__link">My Interview</span>
           </Link>
           <Link to="/contact">
             <span className="launch-page__link">Contact</span>

@@ -29,7 +29,7 @@
     position: absolute;
 
     @include mobile {
-      top: 20%;
+      top: 10%;
     }
   }
 
@@ -41,7 +41,11 @@
     animation-fill-mode: forwards;
     display: flex;
     top: 57%;
-    opacity: 0.5;
+    //opacity: 0.5;
+
+    :hover {
+      color: gray;
+    }
 
     @include tablet {
       top: 55%;
@@ -50,7 +54,7 @@
     @include mobile {
       flex-direction: column;
       align-items: center;
-      top: 25%;
+      top: 15%;
     }
   }
 
@@ -60,9 +64,14 @@
     font-family: $logo-font;
     text-decoration: none;
     margin: 0 10px;
+    //border: 1px solid white;
+    color: transparent !important;
+    -webkit-text-stroke-width: 0.8px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
 
     &:hover {
-      text-decoration: underline;
+      -webkit-text-stroke-width: 2px;
+      //text-decoration: underline;
     }
 
     @include tablet {
@@ -122,12 +131,12 @@
       font-size: 6vw;
       font-family: $logo-font;
       color: transparent !important;
-      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-width: 0.3px;
       -webkit-text-stroke-color: rgb(255, 255, 255);
 
       @include mobile {
         font-size: 12vw;
-        -webkit-text-stroke-width: 1px;
+        // -webkit-text-stroke-width: 1px;
         // -webkit-text-stroke-color: $primary-color;
       }
     }
